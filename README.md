@@ -71,15 +71,7 @@
 
 ---
 
-### // 05. CONTRIBUTION TELEMETRY (LIVE SNAKE)
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Zhermos/Zhermos/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake Animation" width="100%" />
-</p>
-
----
-
-### // 06. SYSTEM STATS & ACTIVITY
+### // 05. SYSTEM STATS & ACTIVITY
 
 <p align="center">
   <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Zhermos&show_icons=true&theme=dark&hide_border=true&bg_color=080b11&title_color=00f2fe&icon_color=00f2fe&text_color=94a3b8" alt="GitHub Stats" />
