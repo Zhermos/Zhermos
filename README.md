@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Zedrayami — Applied Physics, Edge AIoT & Civic Systems" width="100%" />
+  <img src="https://raw.githubusercontent.com/Zhermos/Zhermos/main/assets/banner.svg" alt="Zedrayami — Applied Physics, Edge AIoT & Civic Systems" width="100%" />
 </p>
 
 <p align="center">
@@ -17,15 +17,17 @@
 
 ---
 
-### // 01. RESEARCH DIRECTIVES & METHODOLOGY
+### // 01. WHAT I DO (CORE DOMAINS)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Zhermos/Zhermos/main/assets/domains.svg" alt="Zedrayami Core Domains — Acoustofluidics, Edge AIoT, Civic Tech, Swift Audio" width="100%" />
+</p>
+
+---
+
+### // 02. RESEARCH DIRECTIVES & PHILOSOPHY
 
 > *"Most software lives purely inside screens. My work explores what happens when code manipulates physical reality — from high-frequency acoustic standing waves to edge sensors and real-time civic disaster response."*
-
-| 🔬 PHYSICAL LAYER | 👁️ PERCEPTION LAYER | 🌐 APPLICATION LAYER |
-| :--- | :--- | :--- |
-| **Acoustofluidics** | **Edge Vision & AIoT** | **Swift iOS Audio** |
-| Wave Interference | Deception & Threat Detection | Civic Disaster Resilience |
-| Fractal Mathematics | Sensor Telemetry | Resilient Web Platforms |
 
 - **Physical & Nanoscale Computing**: ศึกษาการนำซอฟต์แวร์และการคำนวณทางคณิตศาสตร์มาประยุกต์ร่วมกับฟิสิกส์คลื่นเสียงในอนุภาคระดับไมโคร/นาโน
 - **Edge Intelligence**: วิจัยและพัฒนาระบบ Vision AI ประมวลผลบนอุปกรณ์ขนาดเล็กเพื่อแก้ปัญหาความปลอดภัยในโลกจริง
@@ -34,7 +36,7 @@
 
 ---
 
-### // 02. CORE SYSTEM SCHEMATICS (FEATURED WORK)
+### // 03. CORE SYSTEM SCHEMATICS (FEATURED WORK)
 
 #### 01 / Smart Acoustofluidic Nanodetector `[STATUS: ACTIVE R&D]`
 > ระบบจำลองและแสดงผลการตรวจจับอนุภาคระดับนาโนโดยใช้ปรากฏการณ์คลื่นเสียงความถี่สูง (Acoustic Radiation Force)  
@@ -58,7 +60,7 @@
 
 ---
 
-### // 03. ENGINEERING MATRIX & INSTRUMENTS
+### // 04. ENGINEERING MATRIX & INSTRUMENTS
 
 | โดเมนความเชี่ยวชาญ | เครื่องมือและเทคโนโลยีหลัก |
 | :--- | :--- |
@@ -69,7 +71,15 @@
 
 ---
 
-### // 04. TELEMETRY & SYSTEM ACTIVITY
+### // 05. CONTRIBUTION TELEMETRY (LIVE SNAKE)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Zhermos/Zhermos/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake Animation" width="100%" />
+</p>
+
+---
+
+### // 06. SYSTEM STATS & ACTIVITY
 
 <p align="center">
   <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Zhermos&show_icons=true&theme=dark&hide_border=true&bg_color=080b11&title_color=00f2fe&icon_color=00f2fe&text_color=94a3b8" alt="GitHub Stats" />
