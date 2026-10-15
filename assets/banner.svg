@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="280">
+  <defs>
+    <!-- Soft Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090b10" />
+      <stop offset="100%" stop-color="#050608" />
+    </linearGradient>
+
+    <!-- Subtle Wave Glow -->
+    <radialGradient id="softGlow" cx="80%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Wave Gradient -->
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+
+    /* Gentle Ambient Animation */
+    .pulse {
+      animation: gentle-pulse 4s ease-in-out infinite alternate;
+    }
+    @keyframes gentle-pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(1.08); opacity: 1; }
+    }
+
+    .float-slow {
+      animation: float 6s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-6px); }
+    }
+
+    .node-ping {
+      animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+      transform-origin: 960px 140px;
+    }
+    @keyframes ping {
+      0% { r: 4px; opacity: 0.9; }
+      75%, 100% { r: 24px; opacity: 0; }
+    }
+  </style>
+
+  <!-- Clean Base with Subtle Border -->
+  <rect width="1200" height="280" rx="14" fill="url(#bg)" stroke="#1a202c" stroke-width="1" />
+  <rect width="1200" height="280" rx="14" fill="url(#softGlow)" />
+
+  <!-- LEFT: CLEAN TYPOGRAPHY -->
+  <g transform="translate(80, 0)">
+    <!-- Minimalist Status Tag -->
+    <g transform="translate(0, 68)">
+      <circle cx="5" cy="5" r="3.5" fill="#00f2fe" />
+      <text x="18" y="9" class="mono" font-size="11" fill="#00f2fe" font-weight="600" letter-spacing="1.5">ZEDRAYAMI</text>
+    </g>
+
+    <!-- Main Name -->
+    <text x="0" y="142" class="sans" font-size="48" font-weight="700" fill="#f8fafc" letter-spacing="-0.8">
+      Zedrayami<tspan fill="#00f2fe">.</tspan>
+    </text>
+
+    <!-- Focus Domains -->
+    <text x="0" y="180" class="sans" font-size="16" font-weight="500" fill="#94a3b8">
+      Applied Physics &nbsp;·&nbsp; Edge AIoT &nbsp;·&nbsp; Swift Native &nbsp;·&nbsp; Civic Resilience
+    </text>
+
+    <!-- Minimal Tagline -->
+    <text x="0" y="214" class="mono" font-size="12.5" fill="#475569">
+      Exploring where software interacts with physical reality.
+    </text>
+  </g>
+
+  <!-- RIGHT: MINIMAL ACOUSTIC WAVE ACCENT -->
+  <g class="float-slow">
+    <!-- Background Harmonic Lines -->
+    <path d="M 760 140 Q 860 80, 960 140 T 1140 140" fill="none" stroke="#1e293b" stroke-width="1.2" stroke-dasharray="3 4" />
+    <path d="M 760 140 Q 860 180, 960 140 T 1140 140" fill="none" stroke="#1e293b" stroke-width="1.2" stroke-dasharray="3 4" />
+
+    <!-- Secondary Wave -->
+    <path d="M 780 140 Q 870 100, 960 140 T 1120 140" fill="none" stroke="#00f2fe" stroke-width="1.2" stroke-opacity="0.3" />
+
+    <!-- Primary Standing Wave (Acoustic Node) -->
+    <path d="M 780 140 Q 870 70, 960 140 T 1120 140" fill="none" stroke="url(#waveGrad)" stroke-width="2.2" class="pulse" />
+    <path d="M 780 140 Q 870 210, 960 140 T 1120 140" fill="none" stroke="url(#waveGrad)" stroke-width="2.2" class="pulse" />
+
+    <!-- Center Trapping Focal Node -->
+    <circle cx="960" cy="140" r="24" fill="none" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.4" class="node-ping" />
+    <circle cx="960" cy="140" r="5" fill="#f8fafc" stroke="#00f2fe" stroke-width="2" />
+    
+    <!-- Minimal Clean Label -->
+    <text x="960" y="172" class="mono" font-size="9.5" fill="#64748b" text-anchor="middle" letter-spacing="1">λ NODE</text>
+  </g>
+</svg>
