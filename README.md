@@ -1,81 +1,77 @@
-```markdown
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:238636&height=210&section=header&text=Zedrayami&fontSize=54&fontColor=ffffff&fontAlignY=36&desc=AI%20%26%20IoT%20%E2%80%A2%20Web%20Development%20%E2%80%A2%20Swift%20%E2%80%A2%20Scientific%20Tech&descAlignY=58&descSize=18" alt="Zedrayami Banner" width="100%" />
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0b0b0c,100:111113&height=180&section=header&text=ZEDRAYAMI&fontSize=52&fontColor=f6f6f3&fontAlignY=42&desc=AI%20%26%20IoT%20%E2%80%A2%20Nanotech%20Computing%20%E2%80%A2%20Swift%20%E2%80%A2%20Civic%20Tech&descAlignY=64&descSize=16&stroke=4da3ff&strokeWidth=2" alt="Zedrayami Banner" width="100%" />
+</p>
 
+<p align="center">
   <a href="https://github.com/Zhermos">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3FB950&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Zedrayami+(%40Zhermos)+%F0%9F%91%8B;Building+AIoT+Systems%2C+Web+Platforms+%26+iOS+Apps;Exploring+Scientific+Computing+%26+Creative+Algorithms;180%2B+Contributions+and+Counting+%F0%9F%9A%80" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=4DA3FF&center=true&vCenter=true&width=650&lines=Building+Intelligent+AIoT+Systems+%26+Computer+Vision;Exploring+Acoustofluidic+Nanotechnology+%26+Math;Crafting+Native+iOS+Apps+%26+Impactful+Civic+Tech;Bridging+Scientific+Theory+into+Tangible+Software" alt="Typing SVG" />
   </a>
+</p>
 
-  <p align="center">
-    <a href="https://github.com/Zhermos">
-      <img src="https://img.shields.io/badge/GitHub-Zhermos-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-    </a>
-    <a href="https://github.com/Zhermos?tab=repositories">
-      <img src="https://img.shields.io/badge/Repositories-10%2B%20Projects-238636?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" />
-    </a>
-    <a href="mailto:your.email@example.com">
-      <img src="https://img.shields.io/badge/Contact-Email%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-    </a>
-  </p>
-</div>
+<p align="center">
+  <a href="https://github.com/Zhermos?tab=repositories"><img src="https://img.shields.io/badge/Projects-10%2B%20Repos-4da3ff?style=for-the-badge&labelColor=0b0b0c" alt="Projects" /></a>
+  <a href="mailto:your_real_email@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20Me-f6f6f3?style=for-the-badge&logo=gmail&logoColor=0b0b0c&labelColor=0b0b0c&color=4da3ff" alt="Email" /></a>
+  <a href="https://github.com/Zhermos"><img src="https://img.shields.io/badge/Status-Building%20%26%20Learning-0b0b0c?style=for-the-badge&labelColor=0b0b0c&color=238636" alt="Status" /></a>
+</p>
 
-## ■ What I Do
+<p align="center">
+  <b>AI & IoT</b> &nbsp;■&nbsp; <b>Nanotech Computing</b> &nbsp;■&nbsp; <b>Swift / iOS</b> &nbsp;■&nbsp; <b>Civic Tech</b><br>
+  <sub>Python · Swift · JavaScript · C++ · Computer Vision · Scientific Simulation</sub>
+</p>
 
-| หมวดหมู่ความเชี่ยวชาญ | รายละเอียดและผลงานหลัก | เทคโนโลยีและทักษะ |
+---
+
+### ■ What I Do
+
+| ด้านความเชี่ยวชาญ | รายละเอียดและโปรเจกต์เด่น | สแต็กเทคโนโลยี |
 | :--- | :--- | :--- |
-| **01 AI & IoT SYSTEMS.** | พัฒนาระบบตรวจจับอัจฉริยะและการประมวลผลร่วมกับอุปกรณ์ IoT เช่น ระบบตรวจจับอาวุธและวิเคราะห์พฤติกรรมใน <a href="https://github.com/Zhermos/Aiot-Deception-Weapon-Detection">Aiot-Deception-Weapon-Detection</a> และโปรเจกต์ <a href="https://github.com/Zhermos/ToL-Zero-69">ToL-Zero-69</a> | <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/AIoT-238636?style=flat-square" alt="AIoT" /> <img src="https://img.shields.io/badge/Computer_Vision-1f6feb?style=flat-square" alt="Computer Vision" /> |
-| **02 WEB & PLATFORM DEV.** | ออกแบบและพัฒนาเว็บแอปพลิเคชัน ระบบจัดการข้อมูล และเครื่องมือแก้ปัญหาสังคม เช่น <a href="https://github.com/Zhermos/SAVE-FLOOD">SAVE-FLOOD</a>, <a href="https://github.com/Zhermos/Subscription_Gemini">Subscription_Gemini</a>, <a href="https://github.com/Zhermos/EdIsonGroup">EdIsonGroup</a> และ <a href="https://github.com/Zhermos/QR">QR</a> | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" /> |
-| **03 MOBILE & CREATIVE CODING.** | พัฒนาแอปพลิเคชันด้านดนตรีบนระบบ iOS ด้วยภาษา Swift ใน <a href="https://github.com/Zhermos/Kintsugi-Music">Kintsugi-Music</a> และสร้างซิมูเลชันเรขาคณิตเชิงคณิตศาสตร์ใน <a href="https://github.com/Zhermos/Fractal-Geometry">Fractal-Geometry</a> | <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift" /> <img src="https://img.shields.io/badge/iOS_App-000000?style=flat-square&logo=apple&logoColor=white" alt="iOS" /> <img src="https://img.shields.io/badge/Fractal_Math-8957e5?style=flat-square" alt="Fractal Math" /> |
-| **04 NANOTECH & SCIENTIFIC TECH.** | บูรณาการซอฟต์แวร์เข้ากับงานวิจัยและนวัตกรรมเชิงวิทยาศาสตร์ เช่น ระบบจำลองและแสดงผล <a href="https://github.com/Zhermos/Smart-Acoustofluidic-Nanodetector">Smart-Acoustofluidic-Nanodetector</a> และโครงการค่ายพัฒนาทักษะ <a href="https://github.com/Zhermos/idp-camp-2026">idp-camp-2026</a> | <img src="https://img.shields.io/badge/Nanotech-008080?style=flat-square" alt="Nanotech" /> <img src="https://img.shields.io/badge/Acoustofluidics-1f6feb?style=flat-square" alt="Acoustofluidics" /> <img src="https://img.shields.io/badge/R%26D-238636?style=flat-square" alt="R&D" /> |
+| **01 AI & IoT SYSTEMS** | วิจัยและพัฒนาระบบตรวจจับอัจฉริยะ (Vision AI) ผสานการทำงานกับอุปกรณ์ฝังตัว เช่น ระบบตรวจจับอาวุธและพฤติกรรมใน [Aiot-Deception-Weapon-Detection](https://github.com/Zhermos/Aiot-Deception-Weapon-Detection) | `Python` `OpenCV` `AIoT` `YOLO` |
+| **02 NANOTECH & SCIENCE** | บูรณาการวิทยาศาสตร์เชิงทฤษฎีสู่งานซอฟต์แวร์จำลอง เช่น การแสดงผลและตรวจวัดอนุภาคระดับนาโนด้วยคลื่นเสียงใน [Smart-Acoustofluidic-Nanodetector](https://github.com/Zhermos/Smart-Acoustofluidic-Nanodetector) | `Scientific Computing` `Acoustofluidics` `Web Simulation` |
+| **03 CIVIC TECH & WEB** | สร้างแพลตฟอร์มที่ตอบโจทย์ปัญหาสังคมในชีวิตจริง เช่น แพลตฟอร์มสนับสนุนและรายงานสถานการณ์อุทกภัย [SAVE-FLOOD](https://github.com/Zhermos/SAVE-FLOOD) | `JavaScript` `Node.js` `API Integration` |
+| **04 MOBILE & CREATIVE CODE** | พัฒนา Native iOS Apps ด้านดนตรีและเสียงด้วยภาษา Swift ใน [Kintsugi-Music](https://github.com/Zhermos/Kintsugi-Music) ตลอดจนการสร้างแบบจำลองคณิตศาสตร์ [Fractal-Geometry](https://github.com/Zhermos/Fractal-Geometry) | `Swift` `SwiftUI` `Creative Math` |
 
-## ■ About Me
+---
 
-สวัสดีครับ ผม **Zedrayami** (<a href="https://github.com/Zhermos">@Zhermos</a>) นักพัฒนาซอฟต์แวร์ที่สนใจการนำเทคโนโลยีมาแก้ปัญหาจริง ตั้งแต่ระบบ **AI & IoT**, **Web Application**, **iOS Development (Swift)** ไปจนถึงการจำลองทางวิทยาศาสตร์และคณิตศาสตร์ (**Scientific & Creative Computing**)
+### ■ About Me
 
-* **Focus Areas:** มุ่งเน้นการสร้างต้นแบบนวัตกรรมที่ใช้งานได้จริง ทั้งระบบตรวจจับอัจฉริยะ (<a href="https://github.com/Zhermos/Aiot-Deception-Weapon-Detection">Aiot-Deception-Weapon-Detection</a>), นวัตกรรมระดับนาโน (<a href="https://github.com/Zhermos/Smart-Acoustofluidic-Nanodetector">Smart-Acoustofluidic-Nanodetector</a>) และแพลตฟอร์มเพื่อสังคม (<a href="https://github.com/Zhermos/SAVE-FLOOD">SAVE-FLOOD</a>)
-* **Coding Habit:** พัฒนาและอัปเดตโปรเจกต์อย่างต่อเนื่องด้วยความถี่มากกว่า **180+ Contributions** ในรอบปีที่ผ่านมา
-* **Philosophy:** ทดลองสร้างจริง เรียนรู้จากโจทย์ที่หลากหลาย และต่อยอดทฤษฎีสู่ซอฟต์แวร์ที่จับต้องได้
+สวัสดีครับ ผม **Zedrayami** นักพัฒนาที่มุ่งเน้นการนำเทคโนโลยีเชิงลึก (Deep Tech & Software) มาสร้างเป็นนวัตกรรมที่ใช้งานได้จริงในโลกกายภาพ
 
-## ■ Stack & Tools
+- 🔬 **Scientific & Practical Focus** — ความสนใจของผมครอบคลุมตั้งแต่การจำลองคลื่นเสียงในอนุภาคระดับนาโน (Nanotechnology) ไปจนถึงระบบปัญญาประดิษฐ์ตรวจจับความปลอดภัย
+- 🛠️ **Engineering Mindset** — ไม่หยุดแค่การเขียนโค้ดบนจอ แต่เชื่อมโยงซอฟต์แวร์เข้ากับเซนเซอร์ IoT, ฮาร์ดแวร์ และแอปพลิเคชันบนมือถือ
+- 🌐 **Civic Impact** — เชื่อมั่นในการใช้ความสามารถทางเทคโนโลยีเพื่อช่วยเหลือสังคมและแก้ปัญหาภัยพิบัติ
+- 💬 **Motto** — *“Turn scientific theories into impactful realities.”*
 
-<div align="center">
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=py,js,swift,html,css,git,github,vscode&theme=dark" alt="My Skills" />
-    </a>
-  </p>
-  <p>
-    <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
-    <img src="https://img.shields.io/badge/Swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white" alt="Swift" />
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </p>
-</div>
+---
 
-## ■ Featured Projects & Highlights
+### ■ Milestones & Highlights
 
-| โปรเจกต์ / ผลงาน | หมวดหมู่ | ภาษาหลัก | รายละเอียดโดยย่อ |
-| :--- | :--- | :--- | :--- |
-| **<a href="https://github.com/Zhermos/Aiot-Deception-Weapon-Detection">Aiot-Deception-Weapon-Detection</a>** | AI & IoT | `Python` | ระบบตรวจจับอาวุธและวิเคราะห์พฤติกรรมด้วยเทคโนโลยี AIoT |
-| **<a href="https://github.com/Zhermos/Smart-Acoustofluidic-Nanodetector">Smart-Acoustofluidic-Nanodetector</a>** | Nanotech / Web | `HTML` | ระบบแสดงผลและจำลองการทำงานของอุปกรณ์ตรวจจับอนุภาคระดับนาโนด้วยคลื่นเสียง |
-| **<a href="https://github.com/Zhermos/Kintsugi-Music">Kintsugi-Music</a>** | Mobile App | `Swift` | แอปพลิเคชันด้านดนตรีและเสียงที่พัฒนาด้วยภาษา Swift |
-| **<a href="https://github.com/Zhermos/SAVE-FLOOD">SAVE-FLOOD</a>** | Civic Tech / Web | `JavaScript` | แพลตฟอร์มเว็บแอปพลิเคชันสำหรับติดตามและสนับสนุนการรับมือสถานการณ์น้ำท่วม |
-| **<a href="https://github.com/Zhermos/Subscription_Gemini">Subscription_Gemini</a>** | Web Application | `JavaScript` | ระบบจัดการและเชื่อมต่อบริการเว็บแอปพลิเคชันสมัยใหม่ |
-| **<a href="https://github.com/Zhermos/Fractal-Geometry">Fractal-Geometry</a>** | Creative Coding | `JavaScript` | การจำลองและสร้างภาพเรขาคณิตแฟรกทัล (Fractal Geometry) ด้วยอัลกอริทึมบนเว็บ |
-| **<a href="https://github.com/Zhermos/EdIsonGroup">EdIsonGroup</a>** | Web Development | `JavaScript` | โปรเจกต์พัฒนาเว็บไซต์และระบบอินเทอร์เฟซสำหรับกลุ่มงาน |
-| **<a href="https://github.com/Zhermos/idp-camp-2026">idp-camp-2026</a>** | Camp / Project | `HTML` | โปรเจกต์และผลงานจากการเข้าร่วมค่ายพัฒนาทักษะ IDP Camp 2026 |
-| **<a href="https://github.com/Zhermos/ToL-Zero-69">ToL-Zero-69</a>** | Software / Python | `Python` | โปรเจกต์พัฒนาโปรแกรมและสคริปต์ประมวลผลด้วยภาษา Python |
-| **<a href="https://github.com/Zhermos/QR">QR</a>** | Web Utility | `HTML` | เครื่องมือสร้างและจัดการ QR Code บนเว็บเบราว์เซอร์ |
+| | โปรเจกต์ / กิจกรรม | ผลลัพธ์และสิ่งที่ได้เรียนรู้ |
+|---|---|---|
+| 🔍 | **AIoT Deception & Weapon Detection** | พัฒนาระบบเฝ้าระวังความปลอดภัยและวิเคราะห์วัตถุอันตรายแบบ Real-time |
+| 🌊 | **SAVE-FLOOD Platform** | ระบบรวบรวมข้อมูลและประสานงานรับมือน้ำท่วมเพื่อสาธารณประโยชน์ |
+| 🧪 | **Acoustofluidic Nanodetector** | ต้นแบบระบบจำลองและตรวจจับระดับนาโนด้วยคลื่นเสียงความถี่สูง |
+| ⛺ | **IDP Camp 2026** | เข้าร่วมโครงการบ่มเพาะและพัฒนาทักษะด้านนวัตกรรมและเทคโนโลยี |
 
-## ■ GitHub Stats
+---
 
-<div align="center">
-  <img height="175em" src="https://github-readme-stats.vercel.app/api?username=Zhermos&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117" alt="Zedrayami GitHub Stats" />
-  <img height="175em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zhermos&layout=compact&langs_count=6&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="Zedrayami Top Languages" />
+### ■ Tech Stack & Tools
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:238636&height=100&section=footer" alt="Footer" width="100%" />
-</div>
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-0b0b0c?style=for-the-badge&logo=python&logoColor=4da3ff" alt="Python" />
+  <img src="https://img.shields.io/badge/Swift-0b0b0c?style=for-the-badge&logo=swift&logoColor=F05138" alt="Swift" />
+  <img src="https://img.shields.io/badge/JavaScript-0b0b0c?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Computer_Vision-0b0b0c?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/Git-0b0b0c?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-0b0b0c?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</p>
+
+---
+
+### ■ Activity & Stats
+
+<p align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Zhermos&show_icons=true&theme=dark&hide_border=true&bg_color=0b0b0c&title_color=4da3ff&icon_color=4da3ff&text_color=f6f6f3" alt="GitHub Stats" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zhermos&layout=compact&theme=dark&hide_border=true&bg_color=0b0b0c&title_color=4da3ff&text_color=f6f6f3" alt="Top Languages" />
+</p>
+
+<p align="center"><sub>■ Turn theories into realities ■</sub></p>
