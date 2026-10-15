@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080b11" />
+      <stop offset="50%" stop-color="#0a0f18" />
+      <stop offset="100%" stop-color="#05070a" />
+    </linearGradient>
+
+    <!-- Cyan to Emerald Gradient -->
+    <linearGradient id="cyanEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cartesianGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#162232" stroke-width="0.8" stroke-opacity="0.6" />
+      <circle cx="40" cy="40" r="1" fill="#00f2fe" fill-opacity="0.25" />
+    </pattern>
+
+    <!-- Radial Glows -->
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap');
+    
+    .tech-mono { font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace; }
+    .display-title { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; }
+    
+    /* Animations */
+    .pulse-ring {
+      animation: wave-pulse 4s ease-out infinite;
+      transform-origin: 940px 180px;
+    }
+    .pulse-ring-2 {
+      animation: wave-pulse 4s ease-out 1.3s infinite;
+      transform-origin: 940px 180px;
+    }
+    .pulse-ring-3 {
+      animation: wave-pulse 4s ease-out 2.6s infinite;
+      transform-origin: 940px 180px;
+    }
+    @keyframes wave-pulse {
+      0% { r: 20px; opacity: 0.9; stroke-width: 2px; }
+      50% { opacity: 0.4; }
+      100% { r: 150px; opacity: 0; stroke-width: 0.5px; }
+    }
+
+    .particle {
+      animation: levitate 3s ease-in-out infinite alternate;
+    }
+    @keyframes levitate {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(-8px) scale(1.15); }
+    }
+
+    .radar-sweep {
+      animation: sweep 8s linear infinite;
+      transform-origin: 940px 180px;
+    }
+    @keyframes sweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .blinker {
+      animation: blink 1.2s steps(2, start) infinite;
+    }
+    @keyframes blink { to { visibility: hidden; } }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" stroke="#1e2c3f" stroke-width="1.5" />
+  <rect width="1200" height="360" rx="16" fill="url(#cartesianGrid)" />
+
+  <!-- Corner Brackets (HUD style) -->
+  <path d="M 24 40 L 24 24 L 40 24" fill="none" stroke="#00f2fe" stroke-width="2" />
+  <path d="M 1176 40 L 1176 24 L 1160 24" fill="none" stroke="#00f2fe" stroke-width="2" stroke-opacity="0.6" />
+  <path d="M 24 320 L 24 336 L 40 336" fill="none" stroke="#00f2fe" stroke-width="2" stroke-opacity="0.6" />
+  <path d="M 1176 320 L 1176 336 L 1160 336" fill="none" stroke="#00f2fe" stroke-width="2" stroke-opacity="0.6" />
+
+  <!-- TOP STATUS BAR -->
+  <g class="tech-mono" font-size="11" fill="#64748b" letter-spacing="1.5">
+    <text x="50" y="52">NODE: <tspan fill="#00f2fe">TH-BKK-01</tspan></text>
+    <text x="220" y="52">DOMAIN: <tspan fill="#f1f5f9">APPLIED PHYSICS &amp; EDGE INTELLIGENCE</tspan></text>
+    <circle cx="1140" cy="48" r="4" fill="#00f2fe" class="blinker" />
+    <text x="1050" y="52" fill="#00f2fe" text-anchor="end">SYS_ONLINE</text>
+  </g>
+
+  <!-- DIVIDER LINE -->
+  <line x1="50" y1="68" x2="1150" y2="68" stroke="#1e293b" stroke-width="1" />
+
+  <!-- LEFT: IDENTITY & MANIFESTO -->
+  <g transform="translate(50, 90)">
+    <rect x="0" y="10" width="140" height="22" rx="4" fill="#0f172a" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.4" />
+    <text x="12" y="25" class="tech-mono" font-size="10" fill="#00f2fe" letter-spacing="1">RESEARCH LAB</text>
+
+    <text x="0" y="86" class="display-title" font-size="56" fill="#f8fafc" letter-spacing="-1">
+      ZEDRAYAMI<tspan fill="#00f2fe">.</tspan>
+    </text>
+
+    <text x="2" y="126" class="display-title" font-size="19" fill="#94a3b8" font-weight="500">
+      Acoustofluidics <tspan fill="#334155">•</tspan> Edge AIoT <tspan fill="#334155">•</tspan> Swift <tspan fill="#334155">•</tspan> Civic Resilience
+    </text>
+
+    <g class="tech-mono" font-size="13" fill="#64748b" transform="translate(2, 166)">
+      <text x="0" y="0">
+        <tspan fill="#00f2fe">&gt;</tspan> Manipulating matter with acoustic waves.
+      </text>
+      <text x="0" y="24">
+        <tspan fill="#00f2fe">&gt;</tspan> Deploying real-time intelligence to the edge.
+      </text>
+    </g>
+  </g>
+
+  <!-- RIGHT: ACOUSTIC WAVE INTERFERENCE & PARTICLE NODE (GRAPHIC) -->
+  <g transform="translate(0, 0)">
+    <circle cx="940" cy="190" r="160" fill="url(#nodeGlow)" />
+
+    <circle cx="940" cy="190" r="130" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 6" />
+    <circle cx="940" cy="190" r="95" fill="none" stroke="#334155" stroke-width="1.2" />
+    <circle cx="940" cy="190" r="60" fill="none" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 4" />
+    
+    <circle cx="940" cy="190" r="20" fill="none" stroke="#00f2fe" class="pulse-ring" />
+    <circle cx="940" cy="190" r="20" fill="none" stroke="#00f2fe" class="pulse-ring-2" />
+    <circle cx="940" cy="190" r="20" fill="none" stroke="#38bdf8" class="pulse-ring-3" />
+
+    <line x1="940" y1="190" x2="940" y2="60" stroke="url(#cyanEmerald)" stroke-width="1.5" class="radar-sweep" stroke-opacity="0.7" />
+
+    <path d="M 760 190 Q 805 160, 850 190 T 940 190 T 1030 190 T 1120 190" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-opacity="0.5" />
+    <path d="M 760 190 Q 805 220, 850 190 T 940 190 T 1030 190 T 1120 190" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.4" />
+
+    <g class="particle">
+      <circle cx="850" cy="190" r="4.5" fill="#00f2fe" />
+      <circle cx="850" cy="190" r="9" fill="none" stroke="#00f2fe" stroke-width="0.8" stroke-opacity="0.4" />
+      <text x="850" y="214" class="tech-mono" font-size="8" fill="#64748b" text-anchor="middle">NODE_01</text>
+    </g>
+
+    <g class="particle" style="animation-delay: -1s;">
+      <circle cx="940" cy="190" r="6" fill="#f8fafc" stroke="#00f2fe" stroke-width="2" />
+      <text x="940" y="165" class="tech-mono" font-size="9" fill="#00f2fe" text-anchor="middle" font-weight="600">λ/2 FOCUS</text>
+    </g>
+
+    <g class="particle" style="animation-delay: -2s;">
+      <circle cx="1030" cy="190" r="4.5" fill="#10b981" />
+      <circle cx="1030" cy="190" r="9" fill="none" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.4" />
+      <text x="1030" y="214" class="tech-mono" font-size="8" fill="#64748b" text-anchor="middle">SENSOR_CV</text>
+    </g>
+
+    <line x1="850" y1="240" x2="1030" y2="240" stroke="#334155" stroke-width="0.8" />
+    <line x1="850" y1="236" x2="850" y2="244" stroke="#334155" stroke-width="0.8" />
+    <line x1="1030" y1="236" x2="1030" y2="244" stroke="#334155" stroke-width="0.8" />
+    <text x="940" y="254" class="tech-mono" font-size="9" fill="#475569" text-anchor="middle">ACOUSTIC TRAPPING MATRIX</text>
+  </g>
+
+  <!-- BOTTOM STATUS FOOTER -->
+  <line x1="50" y1="312" x2="1150" y2="312" stroke="#1e293b" stroke-width="1" />
+  <g class="tech-mono" font-size="10" fill="#475569">
+    <text x="50" y="332">KERNEL: <tspan fill="#94a3b8">HYBRID (PHYSICAL + DIGITAL)</tspan></text>
+    <text x="400" y="332">TARGET: <tspan fill="#94a3b8">HIGH IMPACT SOCIETAL ENGINEERING</tspan></text>
+    <text x="1150" y="332" text-anchor="end" fill="#00f2fe">VER 2.6 // PROD</text>
+  </g>
+</svg>
