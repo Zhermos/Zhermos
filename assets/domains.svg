@@ -1,153 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 550" width="100%" height="550">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="280">
   <style>
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
-    .card-title { font-size: 18.5px; font-weight: 700; fill: #f0f6fc; letter-spacing: 0.3px; }
-    .card-num { font-size: 12.5px; font-weight: 600; fill: #58a6ff; letter-spacing: 0.5px; }
-    .card-desc { font-size: 14px; fill: #8b949e; }
-    .chip-text { font-size: 11px; font-weight: 500; fill: #c9d1d9; }
   </style>
 
-  <!-- ================= CARD 01: COMPETITIVE PROGRAMMING & ALGORITHMS ================= -->
-  <g transform="translate(10, 10)">
-    <rect width="575" height="250" rx="14" fill="#111113" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
-    
-    <rect x="32" y="30" width="8" height="8" rx="2" fill="#58a6ff" />
-    <text x="48" y="38" class="mono card-num">01 // PROBLEM SOLVING</text>
-    <text x="32" y="78" class="sans card-title">COMPETITIVE PROGRAMMING &amp; ALGORITHMS<tspan fill="#58a6ff">.</tspan></text>
-    
-    <text x="32" y="112" class="sans card-desc">แข่งแก้โจทย์ปัญหาเชิงคำนวณและสอวน.คอม</text>
-    <text x="32" y="136" class="sans card-desc">ออกแบบอัลกอริทึมและโครงสร้างข้อมูลขั้นสูง</text>
-    
-    <g transform="translate(32, 185)">
-      <rect width="65" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="32.5" y="17" class="mono chip-text" text-anchor="middle">C++</text>
+  <rect width="1200" height="280" rx="14" fill="#0b0b0c" stroke="#21262d" stroke-width="1" />
 
-      <rect x="73" width="95" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="120.5" y="17" class="mono chip-text" text-anchor="middle">Algorithms</text>
-
-      <rect x="176" width="128" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="240" y="17" class="mono chip-text" text-anchor="middle">Data Structures</text>
+  <g transform="translate(80, 0)">
+    <g transform="translate(0, 68)">
+      <circle cx="5" cy="5" r="3.5" fill="#58a6ff">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="18" y="9" class="mono" font-size="11" fill="#58a6ff" font-weight="600" letter-spacing="1.5">ZEDRAYAMI</text>
     </g>
 
-    <!-- Graphic: Binary Tree / Graph Traversal -->
-    <g transform="translate(480, 125)">
-      <circle cx="0" cy="-30" r="6" fill="#f0f6fc" stroke="#58a6ff" stroke-width="2" />
-      <line x1="0" y1="-24" x2="-22" y2="2" stroke="#3f3f46" stroke-width="1.5" />
-      <line x1="0" y1="-24" x2="22" y2="2" stroke="#3f3f46" stroke-width="1.5" />
-      <circle cx="-22" cy="8" r="5" fill="#58a6ff" />
-      <circle cx="22" cy="8" r="5" fill="#58a6ff" />
-      <line x1="-22" y1="13" x2="-35" y2="35" stroke="#27272a" stroke-width="1.2" stroke-dasharray="2 2" />
-      <line x1="-22" y1="13" x2="-10" y2="35" stroke="#27272a" stroke-width="1.2" stroke-dasharray="2 2" />
-      <line x1="22" y1="13" x2="10" y2="35" stroke="#27272a" stroke-width="1.2" stroke-dasharray="2 2" />
-      <line x1="22" y1="13" x2="35" y2="35" stroke="#27272a" stroke-width="1.2" stroke-dasharray="2 2" />
-      <circle cx="-35" cy="38" r="3.5" fill="#71717a" />
-      <circle cx="-10" cy="38" r="3.5" fill="#71717a" />
-      <circle cx="10" cy="38" r="3.5" fill="#71717a" />
-      <circle cx="35" cy="38" r="3.5" fill="#71717a" />
-      <text x="0" y="60" class="mono" font-size="8.5" fill="#71717a" text-anchor="middle">O(N log N)</text>
-    </g>
+    <text x="0" y="142" class="sans" font-size="48" font-weight="700" fill="#f0f6fc" letter-spacing="-0.8">
+      Zedrayami<tspan fill="#58a6ff">.</tspan>
+    </text>
+
+    <text x="0" y="180" class="sans" font-size="16" font-weight="500" fill="#8b949e">
+      Competitive Programming  ·  Edge AIoT  ·  Scientific Tech  ·  Civic Web
+    </text>
+
+    <text x="0" y="214" class="mono" font-size="12.5" fill="#484f58">
+      Exploring where software interacts with physical reality.
+    </text>
   </g>
 
-  <!-- ================= CARD 02: AIoT & COMPUTER VISION ================= -->
-  <g transform="translate(615, 10)">
-    <rect width="575" height="250" rx="14" fill="#111113" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+  <g>
+    <path d="M 760 140 Q 860 80, 960 140 T 1140 140" fill="none" stroke="#21262d" stroke-width="1.2" stroke-dasharray="3 4" />
+    <path d="M 760 140 Q 860 180, 960 140 T 1140 140" fill="none" stroke="#21262d" stroke-width="1.2" stroke-dasharray="3 4" />
+
+    <path d="M 780 140 Q 870 100, 960 140 T 1120 140" fill="none" stroke="#30363d" stroke-width="1.2" />
     
-    <rect x="32" y="30" width="8" height="8" rx="2" fill="#58a6ff" />
-    <text x="48" y="38" class="mono card-num">02 // EMBEDDED AI</text>
-    <text x="32" y="78" class="sans card-title">AIoT &amp; COMPUTER VISION<tspan fill="#58a6ff">.</tspan></text>
+    <path d="M 780 140 Q 870 70, 960 140 T 1120 140" fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite" />
+    </path>
+    <path d="M 780 140 Q 870 210, 960 140 T 1120 140" fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.9;0.4;0.9" dur="3s" repeatCount="indefinite" />
+    </path>
+
+    <circle cx="960" cy="140" r="16" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="2 3">
+      <animateTransform attributeName="transform" type="rotate" from="0 960 140" to="360 960 140" dur="24s" repeatCount="indefinite" />
+    </circle>
     
-    <text x="32" y="112" class="sans card-desc">ระบบตรวจจับอาวุธและพฤติกรรม Real-time</text>
-    <text x="32" y="136" class="sans card-desc">ประมวลผล Vision AI บนอุปกรณ์ฝังตัว</text>
+    <circle cx="960" cy="140" r="5" fill="#f0f6fc" stroke="#58a6ff" stroke-width="2">
+      <animate attributeName="r" values="4.5;5.5;4.5" dur="3s" repeatCount="indefinite" />
+    </circle>
     
-    <g transform="translate(32, 185)">
-      <rect width="78" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="39" y="17" class="mono chip-text" text-anchor="middle">Python</text>
-
-      <rect x="86" width="70" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="121" y="17" class="mono chip-text" text-anchor="middle">YOLO</text>
-
-      <rect x="164" width="85" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="206" y="17" class="mono chip-text" text-anchor="middle">OpenCV</text>
-    </g>
-
-    <!-- Graphic: Vision Target Reticle -->
-    <g transform="translate(480, 125)">
-      <rect x="-35" y="-35" width="70" height="70" rx="6" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <circle cx="0" cy="0" r="26" fill="none" stroke="#3f3f46" stroke-dasharray="3 3" />
-      <path d="M -20 -10 L -20 -20 L -10 -20" fill="none" stroke="#58a6ff" stroke-width="1.5" />
-      <path d="M 20 -10 L 20 -20 L 10 -20" fill="none" stroke="#58a6ff" stroke-width="1.5" />
-      <path d="M -20 10 L -20 20 L -10 20" fill="none" stroke="#58a6ff" stroke-width="1.5" />
-      <path d="M 20 10 L 20 20 L 10 20" fill="none" stroke="#58a6ff" stroke-width="1.5" />
-      <circle cx="0" cy="0" r="3" fill="#58a6ff" />
-      <text x="0" y="58" class="mono" font-size="8.5" fill="#71717a" text-anchor="middle">TARGET_LOCK</text>
-    </g>
-  </g>
-
-  <!-- ================= CARD 03: SCIENTIFIC COMPUTING ================= -->
-  <g transform="translate(10, 280)">
-    <rect width="575" height="250" rx="14" fill="#111113" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
-    
-    <rect x="32" y="30" width="8" height="8" rx="2" fill="#58a6ff" />
-    <text x="48" y="38" class="mono card-num">03 // PHYSICAL SIMULATION</text>
-    <text x="32" y="78" class="sans card-title">SCIENTIFIC COMPUTING<tspan fill="#58a6ff">.</tspan></text>
-    
-    <text x="32" y="112" class="sans card-desc">จำลองและควบคุมอนุภาคระดับนาโน</text>
-    <text x="32" y="136" class="sans card-desc">ด้วยแรงกลจากคลื่นเสียงความถี่สูง (SSAW)</text>
-    
-    <g transform="translate(32, 185)">
-      <rect width="80" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="40" y="17" class="mono chip-text" text-anchor="middle">Physics</text>
-
-      <rect x="88" width="88" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="132" y="17" class="mono chip-text" text-anchor="middle">Nanotech</text>
-
-      <rect x="184" width="98" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="233" y="17" class="mono chip-text" text-anchor="middle">Simulation</text>
-    </g>
-
-    <!-- Graphic: Standing Wave Nodes -->
-    <g transform="translate(480, 125)">
-      <circle cx="0" cy="0" r="45" fill="none" stroke="#27272a" stroke-dasharray="3 4" />
-      <circle cx="0" cy="0" r="28" fill="none" stroke="#3f3f46" />
-      <path d="M -45 0 C -20 -35, 20 35, 45 0" fill="none" stroke="#58a6ff" stroke-width="1.6" />
-      <path d="M -45 0 C -20 35, 20 -35, 45 0" fill="none" stroke="#71717a" stroke-width="1" />
-      <circle cx="0" cy="0" r="4.5" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1.5" />
-      <text x="0" y="65" class="mono" font-size="8.5" fill="#71717a" text-anchor="middle">λ/2 TRAP</text>
-    </g>
-  </g>
-
-  <!-- ================= CARD 04: WEB DEVELOPMENT ================= -->
-  <g transform="translate(615, 280)">
-    <rect width="575" height="250" rx="14" fill="#111113" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
-    
-    <rect x="32" y="30" width="8" height="8" rx="2" fill="#58a6ff" />
-    <text x="48" y="38" class="mono card-num">04 // CIVIC PLATFORMS</text>
-    <text x="32" y="78" class="sans card-title">WEB DEVELOPMENT<tspan fill="#58a6ff">.</tspan></text>
-    
-    <text x="32" y="112" class="sans card-desc">แพลตฟอร์มสนับสนุนการรับมือน้ำท่วม</text>
-    <text x="32" y="136" class="sans card-desc">รายงานจุดเสี่ยงและประสานงานกู้ภัยสาธารณะ</text>
-    
-    <g transform="translate(32, 185)">
-      <rect width="95" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="47" y="17" class="mono chip-text" text-anchor="middle">JavaScript</text>
-
-      <rect x="103" width="70" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="138" y="17" class="mono chip-text" text-anchor="middle">Node.js</text>
-
-      <rect x="181" width="105" height="26" rx="13" fill="#18181b" stroke="#27272a" stroke-width="1" />
-      <text x="233" y="17" class="mono chip-text" text-anchor="middle">SAVE-FLOOD</text>
-    </g>
-
-    <!-- Graphic: Relay Network -->
-    <g transform="translate(480, 125)">
-      <path d="M -35 15 Q -10 -25, 15 10 T 40 -15" fill="none" stroke="#58a6ff" stroke-width="1.4" opacity="0.8" />
-      <circle cx="-35" cy="15" r="3.5" fill="#58a6ff" />
-      <circle cx="15" cy="10" r="4.5" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1.5" />
-      <circle cx="40" cy="-15" r="3.5" fill="#58a6ff" />
-      <line x1="-35" y1="15" x2="15" y2="10" stroke="#27272a" stroke-width="1" stroke-dasharray="2 3" />
-      <line x1="15" y1="10" x2="40" y2="-15" stroke="#27272a" stroke-width="1" stroke-dasharray="2 3" />
-      <text x="0" y="58" class="mono" font-size="8.5" fill="#71717a" text-anchor="middle">RELAY_NET</text>
-    </g>
+    <text x="960" y="172" class="mono" font-size="9.5" fill="#8b949e" text-anchor="middle" letter-spacing="1">λ NODE</text>
   </g>
 </svg>
