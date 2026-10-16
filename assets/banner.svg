@@ -1,113 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="350">
   <defs>
     <!-- Subtle Dot Grid Pattern (PepesX231 Style) -->
-    <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="12" cy="12" r="1" fill="#30363d" opacity="0.3" />
+    <pattern id="dotGrid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="1.1" fill="#30363d" opacity="0.32" />
     </pattern>
   </defs>
 
   <style>
     .bg { fill: #0b0b0c; }
     .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
-    .big { font-family: Impact, 'Arial Black', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: 1.5px; }
+    .big { font-family: Impact, 'Arial Black', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: 2px; }
     .thm { font-family: 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   </style>
 
-  <!-- Clean Matte Background -->
-  <rect width="1200" height="280" rx="14" fill="#0b0b0c" stroke="#21262d" stroke-width="1" />
+  <!-- Clean Matte Background (Expansive 350px Height) -->
+  <rect width="1200" height="350" rx="16" fill="#0b0b0c" stroke="#21262d" stroke-width="1" />
 
   <!-- Ambient Dot Matrix Texture -->
-  <rect width="1200" height="280" rx="14" fill="url(#dotGrid)" />
+  <rect width="1200" height="350" rx="16" fill="url(#dotGrid)" />
 
   <!-- ================= LEFT: SERENE FLOATING 3D ISOMETRIC WHITE CUBE ================= -->
-  <g transform="translate(60, 0)">
+  <g transform="translate(40, 0)">
     <!-- Soft Ambient Floor Shadow -->
-    <ellipse cx="100" cy="195" rx="24" ry="11" fill="#000000" opacity="0.45">
-      <animate attributeName="rx" values="24;20;24" dur="4.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+    <ellipse cx="120" cy="245" rx="30" ry="13" fill="#000000" opacity="0.45">
+      <animate attributeName="rx" values="30;25;30" dur="4.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
       <animate attributeName="opacity" values="0.45;0.25;0.45" dur="4.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
     </ellipse>
 
     <!-- Floating 3D White Cube (Smooth Slow Hover) -->
     <g>
-      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="4.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
       
       <!-- Top Face (Direct Light - Crisp White) -->
-      <polygon points="100,105 132,123 100,141 68,123" fill="#ffffff" />
+      <polygon points="120,135 156,155 120,175 84,155" fill="#ffffff" />
       <!-- Left Face (Diffuse Light - Silver Grey) -->
-      <polygon points="68,123 100,141 100,177 68,159" fill="#d0d7de" />
+      <polygon points="84,155 120,175 120,215 84,195" fill="#d0d7de" />
       <!-- Right Face (Shadow Side - Steel Grey) -->
-      <polygon points="100,141 132,123 132,159 100,177" fill="#8b949e" />
+      <polygon points="120,175 156,155 156,195 120,215" fill="#8b949e" />
       
       <!-- Crisp Edge Highlight -->
-      <line x1="100" y1="141" x2="100" y2="177" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1" />
-      <line x1="68" y1="123" x2="100" y2="141" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1" />
+      <line x1="120" y1="175" x2="120" y2="215" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.2" />
+      <line x1="84" y1="155" x2="120" y2="175" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1.2" />
+      <line x1="120" y1="175" x2="156" y2="155" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.2" />
     </g>
 
     <!-- Small Accent Dot -->
-    <circle cx="170" cy="90" r="2.5" fill="#58a6ff" opacity="0.7" />
+    <circle cx="195" cy="115" r="3" fill="#58a6ff" opacity="0.65" />
   </g>
 
-  <!-- ================= CENTER: BOLD HERO TYPOGRAPHY ================= -->
+  <!-- ================= CENTER: BOLD HERO TYPOGRAPHY (EXPANSIVE & CONFIDENT) ================= -->
   <g>
     <!-- Top Lead-in -->
-    <text x="600" y="58" class="mono" font-size="13" font-weight="600" fill="#8b949e" letter-spacing="3" text-anchor="middle">HELLO, I'M · สวัสดีครับ ผม</text>
+    <text x="600" y="68" class="mono" font-size="13.5" font-weight="600" fill="#8b949e" letter-spacing="3.5" text-anchor="middle">HELLO, I'M · สวัสดีครับ ผม</text>
 
     <!-- Big Bold Hero Name -->
-    <text x="600" y="136" class="big" font-size="82" fill="#f0f6fc" text-anchor="middle">ZEDRAYAMI<tspan fill="#58a6ff">.</tspan></text>
+    <text x="600" y="162" class="big" font-size="90" fill="#f0f6fc" text-anchor="middle">ZEDRAYAMI<tspan fill="#58a6ff">.</tspan></text>
 
     <!-- Handle with Blinking Block Cursor -->
-    <text x="600" y="174" class="mono" font-size="18" font-weight="700" fill="#58a6ff" text-anchor="middle">&gt; Zed<tspan fill="#58a6ff">█<animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" calcMode="discrete" /></tspan></text>
+    <text x="600" y="208" class="mono" font-size="19" font-weight="700" fill="#58a6ff" text-anchor="middle">&gt; Zed<tspan fill="#58a6ff">█<animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" calcMode="discrete" /></tspan></text>
 
     <!-- Thai Tagline in Clean Loopless Thai Font -->
-    <text x="600" y="210" class="thm" font-size="16" font-weight="500" fill="#f0f6fc" text-anchor="middle">สำรวจจุดที่ซอฟต์แวร์เชื่อมต่อกับโลกความจริง</text>
+    <text x="600" y="250" class="thm" font-size="17" font-weight="500" fill="#f0f6fc" text-anchor="middle">สำรวจจุดที่ซอฟต์แวร์เชื่อมต่อกับโลกความจริง</text>
 
     <!-- Focus Domains -->
-    <text x="600" y="244" class="mono" font-size="11.5" font-weight="600" fill="#58a6ff" letter-spacing="1.5" text-anchor="middle">COMPETITIVE PROGRAMMING · AIoT · SCIENTIFIC COMPUTING · WEB DEV</text>
+    <text x="600" y="292" class="mono" font-size="12" font-weight="600" fill="#58a6ff" letter-spacing="2" text-anchor="middle">COMPETITIVE PROGRAMMING · AIoT · SCIENTIFIC COMPUTING · WEB DEV</text>
   </g>
 
   <!-- ================= RIGHT: ROLLING 3D ISOMETRIC BLUE CUBE (กลิ้งไปกลิ้งมา) ================= -->
-  <g transform="translate(900, 0)">
+  <g transform="translate(880, 0)">
     <!-- Floor Shadow Tracking the Roll -->
-    <ellipse cx="140" cy="195" rx="26" ry="10" fill="#000000" opacity="0.45">
-      <animate attributeName="cx" values="115; 165; 115" dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
-      <animate attributeName="rx" values="22; 28; 22" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
+    <ellipse cx="180" cy="245" rx="32" ry="13" fill="#000000" opacity="0.45">
+      <animate attributeName="cx" values="150; 210; 150" dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
+      <animate attributeName="rx" values="28; 35; 28" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
     </ellipse>
 
     <!-- Layer 1: Horizontal Roll Translation (Left <-> Right) -->
     <g>
       <animateTransform attributeName="transform" type="translate" 
-        values="-25,0; 25,0; -25,0" 
+        values="-30,0; 30,0; -30,0" 
         dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
       
       <!-- Layer 2: Arc Lift (Bobbing naturally as it tilts and rolls) -->
       <g>
         <animateTransform attributeName="transform" type="translate" 
-          values="0,-5; 0,2; 0,-5" 
+          values="0,-6; 0,3; 0,-6" 
           dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
 
-        <!-- Layer 3: Dynamic Roll & Tilt Rotation around Center (140, 140) -->
+        <!-- Layer 3: Dynamic Roll & Tilt Rotation around Center (180, 175) -->
         <g>
           <animateTransform attributeName="transform" type="rotate" 
-            values="-32 140 140; 32 140 140; -32 140 140" 
+            values="-34 180 175; 34 180 175; -34 180 175" 
             dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
 
           <!-- 3D Isometric Blue Cube -->
-          <!-- Top Face -->
-          <polygon points="140,105 172,123 140,141 108,123" fill="#79c0ff" />
-          <!-- Left Face -->
-          <polygon points="108,123 140,141 140,177 108,159" fill="#58a6ff" />
-          <!-- Right Face -->
-          <polygon points="140,141 172,123 172,159 140,177" fill="#1f6feb" />
+          <!-- Top Face (Illuminated Cyan) -->
+          <polygon points="180,135 216,155 180,175 144,155" fill="#79c0ff" />
+          <!-- Left Face (Flat Blue #58a6ff) -->
+          <polygon points="144,155 180,175 180,215 144,195" fill="#58a6ff" />
+          <!-- Right Face (Deep Royal Blue #1f6feb) -->
+          <polygon points="180,175 216,155 216,195 180,215" fill="#1f6feb" />
           
           <!-- Edge Highlight Lines -->
-          <line x1="140" y1="141" x2="140" y2="177" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1.2" />
-          <line x1="108" y1="123" x2="140" y2="141" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.2" />
-          <line x1="140" y1="141" x2="172" y2="123" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.2" />
+          <line x1="180" y1="175" x2="180" y2="215" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1.2" />
+          <line x1="144" y1="155" x2="180" y2="175" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.2" />
+          <line x1="180" y1="175" x2="216" y2="155" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.2" />
         </g>
       </g>
     </g>
 
     <!-- Small Accent Dot -->
-    <circle cx="215" cy="80" r="2.5" fill="#58a6ff" opacity="0.6" />
+    <circle cx="105" cy="115" r="3" fill="#8b949e" opacity="0.5" />
   </g>
 </svg>
