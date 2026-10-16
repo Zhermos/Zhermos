@@ -2,42 +2,133 @@
   <style>
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+    .name-title { font-size: 48px; font-weight: 700; letter-spacing: -0.8px; }
+    
+    .step-0 { animation: d0 7.5s infinite; }
+    .step-1 { animation: d1 7.5s infinite; }
+    .step-2 { animation: d2 7.5s infinite; }
+    .step-3 { animation: d3 7.5s infinite; }
+    .step-4 { animation: d4 7.5s infinite; }
+    .step-5 { animation: d5 7.5s infinite; }
+    .step-6 { animation: d6 7.5s infinite; }
+    .step-7 { animation: d7 7.5s infinite; }
+    .step-final { animation: dFinal 7.5s infinite; }
+
+    @keyframes d0 { 0%, 4% { opacity: 1; } 4.1%, 100% { opacity: 0; } }
+    @keyframes d1 { 0%, 4% { opacity: 0; } 4.1%, 8% { opacity: 1; } 8.1%, 100% { opacity: 0; } }
+    @keyframes d2 { 0%, 8% { opacity: 0; } 8.1%, 12% { opacity: 1; } 12.1%, 100% { opacity: 0; } }
+    @keyframes d3 { 0%, 12% { opacity: 0; } 12.1%, 16% { opacity: 1; } 16.1%, 100% { opacity: 0; } }
+    @keyframes d4 { 0%, 16% { opacity: 0; } 16.1%, 20% { opacity: 1; } 20.1%, 100% { opacity: 0; } }
+    @keyframes d5 { 0%, 20% { opacity: 0; } 20.1%, 24% { opacity: 1; } 24.1%, 100% { opacity: 0; } }
+    @keyframes d6 { 0%, 24% { opacity: 0; } 24.1%, 28% { opacity: 1; } 28.1%, 100% { opacity: 0; } }
+    @keyframes d7 { 0%, 28% { opacity: 0; } 28.1%, 32% { opacity: 1; } 32.1%, 100% { opacity: 0; } }
+    @keyframes dFinal { 0%, 32% { opacity: 0; } 32.1%, 94% { opacity: 1; } 94.1%, 100% { opacity: 0; } }
   </style>
 
   <!-- Clean Matte Background (No Glow) -->
   <rect width="1200" height="280" rx="14" fill="#0b0b0c" stroke="#21262d" stroke-width="1" />
 
-  <!-- LEFT: CLEAN FLAT TYPOGRAPHY -->
+  <!-- LEFT: CLEAN FLAT TYPOGRAPHY & BINARY-TO-NAME DECODER -->
   <g transform="translate(80, 0)">
+    <!-- Small Category Badge -->
     <g transform="translate(0, 68)">
-      <circle cx="5" cy="5" r="3.5" fill="#58a6ff" />
+      <circle cx="5" cy="5" r="3.5" fill="#58a6ff">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite" />
+      </circle>
       <text x="18" y="9" class="mono" font-size="11" fill="#58a6ff" font-weight="600" letter-spacing="1.5">ZEDRAYAMI</text>
     </g>
 
-    <text x="0" y="142" class="sans" font-size="48" font-weight="700" fill="#f0f6fc" letter-spacing="-0.8">
-      Zedrayami<tspan fill="#58a6ff">.</tspan>
+    <!-- BINARY TO TEXT DECODING SEQUENCE -->
+    <!-- Frame 0: Raw binary typing -->
+    <text x="0" y="142" class="sans name-title step-0" opacity="0">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.04;0.041;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#58a6ff">01001010_</tspan>
     </text>
 
+    <!-- Frame 1: Binary morphs to 'Z' code -->
+    <text x="0" y="142" class="sans name-title step-1" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.04;0.041;0.08;0.081;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#58a6ff">01011010_</tspan>
+    </text>
+
+    <!-- Frame 2: 'Z' decodes, rest binary -->
+    <text x="0" y="142" class="sans name-title step-2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.08;0.081;0.12;0.121;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#f0f6fc">Z</tspan><tspan fill="#58a6ff">01100101_</tspan>
+    </text>
+
+    <!-- Frame 3: 'Ze' decodes -->
+    <text x="0" y="142" class="sans name-title step-3" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.12;0.121;0.16;0.161;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#f0f6fc">Ze</tspan><tspan fill="#58a6ff">0110010_</tspan>
+    </text>
+
+    <!-- Frame 4: 'Zed' decodes -->
+    <text x="0" y="142" class="sans name-title step-4" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.16;0.161;0.20;0.201;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#f0f6fc">Zed</tspan><tspan fill="#58a6ff">011100_</tspan>
+    </text>
+
+    <!-- Frame 5: 'Zedra' decodes -->
+    <text x="0" y="142" class="sans name-title step-5" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.20;0.201;0.24;0.241;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#f0f6fc">Zedra</tspan><tspan fill="#58a6ff">0111_</tspan>
+    </text>
+
+    <!-- Frame 6: 'Zedrayam' decodes -->
+    <text x="0" y="142" class="sans name-title step-6" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.24;0.241;0.28;0.281;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#f0f6fc">Zedrayam</tspan><tspan fill="#58a6ff">01_</tspan>
+    </text>
+
+    <!-- Frame 7: 'Zedrayami' full with blinking cursor -->
+    <text x="0" y="142" class="sans name-title step-7" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.28;0.281;0.32;0.321;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#f0f6fc">Zedrayami</tspan><tspan fill="#58a6ff">_</tspan>
+    </text>
+
+    <!-- Frame Final: Fully Resolved Name (stays clearly visible) -->
+    <text x="0" y="142" class="sans name-title step-final" opacity="1">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.32;0.321;0.94;0.941;1" dur="7.5s" repeatCount="indefinite" />
+      <tspan fill="#f0f6fc">Zedrayami</tspan><tspan fill="#58a6ff">.</tspan>
+    </text>
+
+    <!-- Focus Domains -->
     <text x="0" y="180" class="sans" font-size="16" font-weight="500" fill="#8b949e">
-      Applied Physics  ·  Edge AIoT  ·  Swift Native  ·  Civic Resilience
+      Competitive Programming  ·  Edge AIoT  ·  Scientific Tech  ·  Civic Web
     </text>
 
+    <!-- Tagline -->
     <text x="0" y="214" class="mono" font-size="12.5" fill="#484f58">
       Exploring where software interacts with physical reality.
     </text>
   </g>
 
-  <!-- RIGHT: CLEAN FLAT TECHNICAL WAVE (NO GLOW) -->
+  <!-- RIGHT: ANIMATED TECHNICAL WAVE & ROTATING NODE -->
   <g>
     <path d="M 760 140 Q 860 80, 960 140 T 1140 140" fill="none" stroke="#21262d" stroke-width="1.2" stroke-dasharray="3 4" />
     <path d="M 760 140 Q 860 180, 960 140 T 1140 140" fill="none" stroke="#21262d" stroke-width="1.2" stroke-dasharray="3 4" />
 
     <path d="M 780 140 Q 870 100, 960 140 T 1120 140" fill="none" stroke="#30363d" stroke-width="1.2" />
-    <path d="M 780 140 Q 870 70, 960 140 T 1120 140" fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-opacity="0.8" />
-    <path d="M 780 140 Q 870 210, 960 140 T 1120 140" fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-opacity="0.8" />
+    
+    <!-- Wave 1 (Phase breathing) -->
+    <path d="M 780 140 Q 870 70, 960 140 T 1120 140" fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite" />
+    </path>
+    <!-- Wave 2 (Phase breathing) -->
+    <path d="M 780 140 Q 870 210, 960 140 T 1120 140" fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.9;0.4;0.9" dur="3s" repeatCount="indefinite" />
+    </path>
 
-    <circle cx="960" cy="140" r="16" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="2 3" />
-    <circle cx="960" cy="140" r="5" fill="#f0f6fc" stroke="#58a6ff" stroke-width="2" />
+    <!-- Rotating Technical Orbit Ring -->
+    <circle cx="960" cy="140" r="16" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="2 3">
+      <animateTransform attributeName="transform" type="rotate" from="0 960 140" to="360 960 140" dur="24s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Central Nodal Particle (Micro-breath) -->
+    <circle cx="960" cy="140" r="5" fill="#f0f6fc" stroke="#58a6ff" stroke-width="2">
+      <animate attributeName="r" values="4.5;5.5;4.5" dur="3s" repeatCount="indefinite" />
+    </circle>
     
     <text x="960" y="172" class="mono" font-size="9.5" fill="#8b949e" text-anchor="middle" letter-spacing="1">λ NODE</text>
   </g>
