@@ -36,7 +36,7 @@
       <text x="240" y="17" class="mono chip-text" text-anchor="middle">Data Structures</text>
     </g>
 
-    <!-- RIGHT: Minimalist Code & Tree Graphic (Example Style with Traversal Animations) -->
+    <!-- RIGHT: Minimalist Code & Tree Graphic (with Real 3D Isometric Cube) -->
     <g transform="translate(420, 65)">
       <rect width="120" height="120" rx="14" fill="#16171a" stroke="#27272a" stroke-width="1" />
       
@@ -50,32 +50,29 @@
       <line x1="42" y1="62" x2="32" y2="86" stroke="#30363d" stroke-width="1.2" stroke-dasharray="2 2" />
       <line x1="42" y1="62" x2="52" y2="86" stroke="#30363d" stroke-width="1.2" stroke-dasharray="2 2" />
       
-      <!-- Active Execution Branch (Highlighted with Data Flow Pulses) -->
-      <line x1="60" y1="42" x2="78" y2="62" stroke="#58a6ff" stroke-width="2" stroke-dasharray="6 10">
-        <animate attributeName="stroke-dashoffset" values="0;-16" dur="1s" repeatCount="indefinite" />
-      </line>
-      <line x1="78" y1="62" x2="88" y2="86" stroke="#58a6ff" stroke-width="1.8" stroke-dasharray="5 10">
-        <animate attributeName="stroke-dashoffset" values="0;-15" dur="1s" repeatCount="indefinite" />
-      </line>
+      <!-- Active Execution Branch -->
+      <line x1="60" y1="42" x2="78" y2="62" stroke="#58a6ff" stroke-width="1.8" />
+      <line x1="78" y1="62" x2="88" y2="86" stroke="#58a6ff" stroke-width="1.5" />
 
-      <!-- Static Tree Nodes -->
-      <circle cx="42" cy="62" r="4.5" fill="#30363d" />
+      <!-- Tree Nodes -->
+      <circle cx="42" cy="62" r="4" fill="#30363d" />
       <circle cx="32" cy="86" r="3" fill="#484f58" />
       <circle cx="52" cy="86" r="3" fill="#484f58" />
 
-      <!-- Active Visited Tree Nodes (Pulsing) -->
-      <circle cx="60" cy="42" r="5.5" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1.5" />
-      <circle cx="78" cy="62" r="5" fill="#58a6ff">
-        <animate attributeName="r" values="5;6;5" dur="1.8s" repeatCount="indefinite" />
-      </circle>
-      <circle cx="88" cy="86" r="4" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1.5">
-        <animate attributeName="r" values="4;5.5;4" dur="1.2s" repeatCount="indefinite" />
-      </circle>
+      <circle cx="60" cy="42" r="5" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1.5" />
+      <circle cx="78" cy="62" r="5" fill="#58a6ff" />
+      <circle cx="88" cy="86" r="4" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1.2" />
 
-      <!-- Floating Blue Cube -->
-      <rect x="94" y="24" width="10" height="10" rx="2" fill="#58a6ff">
-        <animate attributeName="y" values="24;16;24" dur="2.4s" repeatCount="indefinite" />
-      </rect>
+      <!-- Real 3D Isometric Blue Cube (Floating Gently) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="3.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+        <!-- Top Face -->
+        <polygon points="100,16 109,21 100,26 91,21" fill="#79c0ff" />
+        <!-- Left Face -->
+        <polygon points="91,21 100,26 100,38 91,33" fill="#58a6ff" />
+        <!-- Right Face -->
+        <polygon points="100,26 109,21 109,33 100,38" fill="#1f6feb" />
+      </g>
     </g>
   </g>
 
@@ -102,7 +99,7 @@
       <text x="206" y="17" class="mono chip-text" text-anchor="middle">OpenCV</text>
     </g>
 
-    <!-- RIGHT: Minimalist Target Viewfinder Graphic (with Active Scanner & Rotating Reticle) -->
+    <!-- RIGHT: Minimalist Target Viewfinder (with Real 3D Isometric White Cube) -->
     <g transform="translate(420, 65)">
       <rect width="120" height="120" rx="14" fill="#16171a" stroke="#27272a" stroke-width="1" />
       
@@ -112,33 +109,29 @@
       <path d="M 28 78 L 28 88 L 38 88" fill="none" stroke="#58a6ff" stroke-width="2" />
       <path d="M 92 78 L 92 88 L 82 88" fill="none" stroke="#58a6ff" stroke-width="2" />
 
-      <!-- Active Vertical Scanner Beam -->
-      <line x1="26" y1="35" x2="94" y2="35" stroke="#58a6ff" stroke-width="1.5" stroke-opacity="0.8">
-        <animate attributeName="y1" values="32;88;32" dur="2.2s" repeatCount="indefinite" />
-        <animate attributeName="y2" values="32;88;32" dur="2.2s" repeatCount="indefinite" />
-        <animate attributeName="stroke-opacity" values="0.9;0.2;0.9" dur="2.2s" repeatCount="indefinite" />
-      </line>
-
-      <!-- Rotating Target Radar Ring -->
-      <circle cx="60" cy="60" r="18" fill="none" stroke="#30363d" stroke-dasharray="6 4" stroke-width="1.2">
-        <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="8s" repeatCount="indefinite" />
-      </circle>
+      <!-- Reticle Circle & Crosshairs -->
+      <circle cx="60" cy="60" r="18" fill="none" stroke="#30363d" stroke-dasharray="3 3" />
       
-      <!-- Crosshairs -->
       <line x1="42" y1="60" x2="48" y2="60" stroke="#58a6ff" stroke-width="1.5" />
       <line x1="72" y1="60" x2="78" y2="60" stroke="#58a6ff" stroke-width="1.5" />
       <line x1="60" y1="42" x2="60" y2="48" stroke="#58a6ff" stroke-width="1.5" />
       <line x1="60" y1="72" x2="60" y2="78" stroke="#58a6ff" stroke-width="1.5" />
 
-      <!-- Center Target Lock Dot -->
+      <!-- Center Lock Dot -->
       <circle cx="60" cy="60" r="3" fill="#58a6ff">
-        <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
       </circle>
 
-      <!-- Floating White Cube -->
-      <rect x="74" y="24" width="10" height="10" rx="2" fill="#f0f6fc">
-        <animate attributeName="y" values="24;16;24" dur="2.8s" repeatCount="indefinite" />
-      </rect>
+      <!-- Real 3D Isometric White Cube (Floating Gently) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+        <!-- Top Face -->
+        <polygon points="80,16 89,21 80,26 71,21" fill="#ffffff" />
+        <!-- Left Face -->
+        <polygon points="71,21 80,26 80,38 71,33" fill="#d0d7de" />
+        <!-- Right Face -->
+        <polygon points="80,26 89,21 89,33 80,38" fill="#8b949e" />
+      </g>
     </g>
   </g>
 
@@ -165,48 +158,36 @@
       <text x="233" y="17" class="mono chip-text" text-anchor="middle">Simulation</text>
     </g>
 
-    <!-- RIGHT: Minimalist Acoustic Standing Wave Simulation (Oscillating SSAW Waves) -->
+    <!-- RIGHT: Minimalist Acoustic SSAW Wave (with Real 3D Isometric Blue Cube) -->
     <g transform="translate(420, 65)">
       <rect width="120" height="120" rx="14" fill="#16171a" stroke="#27272a" stroke-width="1" />
       
-      <!-- Primary Oscillating Wave Curve -->
-      <path fill="none" stroke="#58a6ff" stroke-width="2">
-        <animate attributeName="d" 
-          values="M 20 60 C 35 30, 45 30, 60 60 C 75 90, 85 90, 100 60;
-                  M 20 60 C 35 60, 45 60, 60 60 C 75 60, 85 60, 100 60;
-                  M 20 60 C 35 90, 45 90, 60 60 C 75 30, 85 30, 100 60;
-                  M 20 60 C 35 60, 45 60, 60 60 C 75 60, 85 60, 100 60;
-                  M 20 60 C 35 30, 45 30, 60 60 C 75 90, 85 90, 100 60" 
-          dur="2.4s" repeatCount="indefinite" />
-      </path>
-
-      <!-- Anti-Phase Reference Standing Wave -->
-      <path fill="none" stroke="#30363d" stroke-width="1.2" stroke-dasharray="2 3">
-        <animate attributeName="d" 
-          values="M 20 60 C 35 90, 45 90, 60 60 C 75 30, 85 30, 100 60;
-                  M 20 60 C 35 60, 45 60, 60 60 C 75 60, 85 60, 100 60;
-                  M 20 60 C 35 30, 45 30, 60 60 C 75 90, 85 90, 100 60;
-                  M 20 60 C 35 60, 45 60, 60 60 C 75 60, 85 60, 100 60;
-                  M 20 60 C 35 90, 45 90, 60 60 C 75 30, 85 30, 100 60" 
-          dur="2.4s" repeatCount="indefinite" />
-      </path>
+      <!-- Calm SSAW Wave Curve -->
+      <path d="M 20 60 C 35 32, 45 32, 60 60 C 75 88, 85 88, 100 60" fill="none" stroke="#58a6ff" stroke-width="2" />
+      <path d="M 20 60 C 35 88, 45 88, 60 60 C 75 32, 85 32, 100 60" fill="none" stroke="#30363d" stroke-width="1.2" stroke-dasharray="2 3" />
 
       <!-- Nodal Line Center Axis -->
       <line x1="60" y1="28" x2="60" y2="92" stroke="rgba(88, 166, 255, 0.3)" stroke-width="1" stroke-dasharray="2 2" />
 
-      <!-- Acoustically Trapped Levitating Microparticles -->
+      <!-- Trapped Levitating Microparticles (Subtle 3px Vibrate) -->
       <circle cx="60" cy="60" r="5.5" fill="#f0f6fc">
-        <animate attributeName="cy" values="60;56;60;64;60" dur="2.0s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="60;57;60" dur="3s" repeatCount="indefinite" />
       </circle>
       
       <circle cx="70" cy="48" r="2.5" fill="#58a6ff">
-        <animate attributeName="cy" values="48;43;48;53;48" dur="1.6s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="48;45;48" dur="2.4s" repeatCount="indefinite" />
       </circle>
 
-      <!-- Floating Blue Cube -->
-      <rect x="22" y="24" width="10" height="10" rx="2" fill="#58a6ff">
-        <animate attributeName="y" values="24;16;24" dur="2.6s" repeatCount="indefinite" />
-      </rect>
+      <!-- Real 3D Isometric Blue Cube -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="3.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+        <!-- Top Face -->
+        <polygon points="28,16 37,21 28,26 19,21" fill="#79c0ff" />
+        <!-- Left Face -->
+        <polygon points="19,21 28,26 28,38 19,33" fill="#58a6ff" />
+        <!-- Right Face -->
+        <polygon points="28,26 37,21 37,33 28,38" fill="#1f6feb" />
+      </g>
     </g>
   </g>
 
@@ -233,7 +214,7 @@
       <text x="233" y="17" class="mono chip-text" text-anchor="middle">SAVE-FLOOD</text>
     </g>
 
-    <!-- RIGHT: Minimalist Web Browser & Active Stream (PepesX231 Card 02 Style with Code Flow) -->
+    <!-- RIGHT: Minimalist Web Browser (with Real 3D Isometric White Cube) -->
     <g transform="translate(420, 65)">
       <rect width="120" height="120" rx="14" fill="#16171a" stroke="#27272a" stroke-width="1" />
       
@@ -244,25 +225,22 @@
       <circle cx="34" cy="14" r="2.5" fill="#3f3f46" />
 
       <!-- Hero Code Tag -->
-      <text x="56" y="74" class="big" font-size="30" fill="#58a6ff" text-anchor="middle">&lt; / &gt;</text>
-      <!-- Blinking Code Prompt Cursor -->
-      <rect x="84" y="55" width="2.5" height="18" fill="#f0f6fc">
-        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" calcMode="discrete" />
-      </rect>
+      <text x="60" y="74" class="big" font-size="32" fill="#58a6ff" text-anchor="middle">&lt; / &gt;</text>
+      
+      <!-- Subtle Code Line -->
+      <rect x="25" y="92" width="28" height="4" rx="2" fill="#30363d" />
+      <rect x="58" y="92" width="38" height="4" rx="2" fill="#21262d" />
 
-      <!-- Dynamic Code Stream Flow Lines -->
-      <rect x="22" y="88" width="24" height="4" rx="2" fill="#30363d" />
-      <rect x="50" y="88" width="48" height="4" rx="2" fill="#58a6ff">
-        <animate attributeName="width" values="16;48;16" dur="2.4s" repeatCount="indefinite" />
-      </rect>
-      <rect x="22" y="96" width="56" height="4" rx="2" fill="#262c36">
-        <animate attributeName="width" values="56;26;56" dur="3.0s" repeatCount="indefinite" />
-      </rect>
-
-      <!-- Floating White Cube -->
-      <rect x="94" y="38" width="10" height="10" rx="2" fill="#f0f6fc">
-        <animate attributeName="y" values="38;30;38" dur="2.5s" repeatCount="indefinite" />
-      </rect>
+      <!-- Real 3D Isometric White Cube (Floating Gently) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="4.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+        <!-- Top Face -->
+        <polygon points="100,28 109,33 100,38 91,33" fill="#ffffff" />
+        <!-- Left Face -->
+        <polygon points="91,33 100,38 100,50 91,45" fill="#d0d7de" />
+        <!-- Right Face -->
+        <polygon points="100,38 109,33 109,45 100,50" fill="#8b949e" />
+      </g>
     </g>
   </g>
 </svg>
