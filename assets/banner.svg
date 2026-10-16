@@ -19,7 +19,7 @@
   <!-- Ambient Dot Matrix Texture -->
   <rect width="1200" height="280" rx="14" fill="url(#dotGrid)" />
 
-  <!-- ================= LEFT: FLOATING 3D ISOMETRIC WHITE CUBE ================= -->
+  <!-- ================= LEFT: SERENE FLOATING 3D ISOMETRIC WHITE CUBE ================= -->
   <g transform="translate(60, 0)">
     <!-- Soft Ambient Floor Shadow -->
     <ellipse cx="100" cy="195" rx="24" ry="11" fill="#000000" opacity="0.45">
@@ -65,38 +65,49 @@
     <text x="600" y="244" class="mono" font-size="11.5" font-weight="600" fill="#58a6ff" letter-spacing="1.5" text-anchor="middle">COMPETITIVE PROGRAMMING · AIoT · SCIENTIFIC COMPUTING · WEB DEV</text>
   </g>
 
-  <!-- ================= RIGHT: FLOATING 3D ISOMETRIC BLUE & DARK CUBES ================= -->
-  <g transform="translate(930, 0)">
-    <!-- Iconic Upper Right 3D Blue Cube (PepesX231 Signature Motif) -->
-    <g>
-      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
-      
-      <!-- Top Face -->
-      <polygon points="120,40 144,54 120,68 96,54" fill="#79c0ff" />
-      <!-- Left Face -->
-      <polygon points="96,54 120,68 120,95 96,81" fill="#58a6ff" />
-      <!-- Right Face -->
-      <polygon points="120,68 144,54 144,81 120,95" fill="#1f6feb" />
-      
-      <!-- Subtle Edge Glow Line -->
-      <line x1="120" y1="68" x2="120" y2="95" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1" />
-    </g>
+  <!-- ================= RIGHT: ROLLING 3D ISOMETRIC BLUE CUBE (กลิ้งไปกลิ้งมา) ================= -->
+  <g transform="translate(900, 0)">
+    <!-- Floor Shadow Tracking the Roll -->
+    <ellipse cx="140" cy="195" rx="26" ry="10" fill="#000000" opacity="0.45">
+      <animate attributeName="cx" values="115; 165; 115" dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
+      <animate attributeName="rx" values="22; 28; 22" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
+    </ellipse>
 
-    <!-- Lower Right Subtle Dark Matte 3D Cube with Blue Accent Top -->
-    <g transform="translate(20, 110)">
-      <ellipse cx="40" cy="85" rx="18" ry="8" fill="#000000" opacity="0.4" />
+    <!-- Layer 1: Horizontal Roll Translation (Left <-> Right) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" 
+        values="-25,0; 25,0; -25,0" 
+        dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
+      
+      <!-- Layer 2: Arc Lift (Bobbing naturally as it tilts and rolls) -->
       <g>
-        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="4.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
-        <!-- Top Face -->
-        <polygon points="40,25 60,36 40,47 20,36" fill="#1c2333" stroke="#58a6ff" stroke-width="1" />
-        <!-- Left Face -->
-        <polygon points="20,36 40,47 40,70 20,59" fill="#141822" />
-        <!-- Right Face -->
-        <polygon points="40,47 60,36 60,59 40,70" fill="#0d1017" />
+        <animateTransform attributeName="transform" type="translate" 
+          values="0,-5; 0,2; 0,-5" 
+          dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
+
+        <!-- Layer 3: Dynamic Roll & Tilt Rotation around Center (140, 140) -->
+        <g>
+          <animateTransform attributeName="transform" type="rotate" 
+            values="-32 140 140; 32 140 140; -32 140 140" 
+            dur="3.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1; 0.45 0 0.55 1" />
+
+          <!-- 3D Isometric Blue Cube -->
+          <!-- Top Face -->
+          <polygon points="140,105 172,123 140,141 108,123" fill="#79c0ff" />
+          <!-- Left Face -->
+          <polygon points="108,123 140,141 140,177 108,159" fill="#58a6ff" />
+          <!-- Right Face -->
+          <polygon points="140,141 172,123 172,159 140,177" fill="#1f6feb" />
+          
+          <!-- Edge Highlight Lines -->
+          <line x1="140" y1="141" x2="140" y2="177" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1.2" />
+          <line x1="108" y1="123" x2="140" y2="141" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.2" />
+          <line x1="140" y1="141" x2="172" y2="123" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.2" />
+        </g>
       </g>
     </g>
 
     <!-- Small Accent Dot -->
-    <circle cx="20" cy="65" r="2" fill="#8b949e" opacity="0.5" />
+    <circle cx="215" cy="80" r="2.5" fill="#58a6ff" opacity="0.6" />
   </g>
 </svg>
