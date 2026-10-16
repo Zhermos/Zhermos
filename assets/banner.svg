@@ -9,43 +9,172 @@
   <!-- Clean Matte Background -->
   <rect width="1200" height="280" rx="14" fill="#0b0b0c" stroke="#21262d" stroke-width="1" />
 
-  <!-- LEFT: BOLD HERO TYPOGRAPHY (PEPSEX231 MINIMALIST STYLE) -->
-  <g transform="translate(80, 0)">
-    <!-- Top Lead-in -->
-    <text x="0" y="58" class="mono" font-size="13" font-weight="600" fill="#8b949e" letter-spacing="3">HELLO, I'M · สวัสดีครับ ผม</text>
+  <!-- LEFT VISUALIZER: CHANNEL L (WAVE + 4 EQUALIZER BARS + WHITE CUBE) -->
+  <g transform="translate(45, 0)">
+    <!-- Baseline & Grid -->
+    <line x1="0" y1="210" x2="250" y2="210" stroke="#21262d" stroke-width="1.5" />
+    <line x1="0" y1="150" x2="250" y2="150" stroke="#1c2028" stroke-width="1" stroke-dasharray="3 4" />
+    <text x="0" y="228" class="mono" font-size="9" fill="#484f58">CH-L · 44.1kHz</text>
 
-    <!-- Big Bold Hero Name -->
-    <text x="0" y="136" class="big" font-size="82" fill="#f0f6fc">ZEDRAYAMI<tspan fill="#58a6ff">.</tspan></text>
+    <!-- Oscillating SSAW Standing Wave Curve -->
+    <path fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-opacity="0.8">
+      <animate attributeName="d" 
+        values="M 0 150 Q 62.5 90, 125 150 T 250 150;
+                M 0 150 Q 62.5 150, 125 150 T 250 150;
+                M 0 150 Q 62.5 210, 125 150 T 250 150;
+                M 0 150 Q 62.5 150, 125 150 T 250 150;
+                M 0 150 Q 62.5 90, 125 150 T 250 150" 
+        dur="3s" repeatCount="indefinite" />
+    </path>
 
-    <!-- Handle with Blinking Block Cursor -->
-    <text x="0" y="174" class="mono" font-size="18" font-weight="700" fill="#58a6ff">&gt; Zed<tspan fill="#58a6ff">█<animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" calcMode="discrete" /></tspan></text>
+    <!-- Fast Data Pulse Packet on Wave -->
+    <path d="M 0 150 Q 62.5 100, 125 150 T 250 150" fill="none" stroke="#f0f6fc" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="14 236">
+      <animate attributeName="stroke-dashoffset" values="0;-250" dur="1.8s" repeatCount="indefinite" />
+    </path>
 
-    <!-- Thai Tagline in Clean Loopless Thai Font -->
-    <text x="0" y="210" class="thm" font-size="16" font-weight="500" fill="#f0f6fc">สำรวจจุดที่ซอฟต์แวร์เชื่อมต่อกับโลกความจริง</text>
+    <!-- 4 Dynamic Bouncing Equalizer Bars -->
+    <!-- Bar L1 -->
+    <g>
+      <rect x="50" width="18" rx="3" fill="#14161a" stroke="#21262d" stroke-width="1">
+        <animate attributeName="y" values="160;105;170;125;160" dur="2.1s" repeatCount="indefinite" />
+        <animate attributeName="height" values="50;105;40;85;50" dur="2.1s" repeatCount="indefinite" />
+      </rect>
+      <rect x="50" width="18" height="2.5" rx="1" fill="#58a6ff" opacity="0.8">
+        <animate attributeName="y" values="153;98;163;118;153" dur="2.1s" repeatCount="indefinite" />
+      </rect>
+    </g>
 
-    <!-- Focus Domains -->
-    <text x="0" y="244" class="mono" font-size="11.5" font-weight="600" fill="#58a6ff" letter-spacing="1.5">COMPETITIVE PROGRAMMING · AIoT · SCIENTIFIC COMPUTING · WEB DEV</text>
+    <!-- Bar L2 -->
+    <g>
+      <rect x="78" width="18" rx="3" fill="#181a20" stroke="#30363d" stroke-width="1">
+        <animate attributeName="y" values="130;70;145;95;130" dur="1.8s" repeatCount="indefinite" />
+        <animate attributeName="height" values="80;140;65;115;80" dur="1.8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="78" width="18" height="2.5" rx="1" fill="#58a6ff">
+        <animate attributeName="y" values="123;63;138;88;123" dur="1.8s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Bar L3 -->
+    <g>
+      <rect x="106" width="18" rx="3" fill="#1c2028" stroke="#388bfd" stroke-width="1" stroke-opacity="0.6">
+        <animate attributeName="y" values="95;150;55;115;95" dur="2.3s" repeatCount="indefinite" />
+        <animate attributeName="height" values="115;60;155;95;115" dur="2.3s" repeatCount="indefinite" />
+      </rect>
+      <rect x="106" width="18" height="2.5" rx="1" fill="#f0f6fc">
+        <animate attributeName="y" values="88;143;48;108;88" dur="2.3s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Bar L4 -->
+    <g>
+      <rect x="134" width="18" rx="3" fill="#1f2838" stroke="#58a6ff" stroke-width="1.2">
+        <animate attributeName="y" values="75;50;120;75;75" dur="1.7s" repeatCount="indefinite" />
+        <animate attributeName="height" values="135;160;90;135;135" dur="1.7s" repeatCount="indefinite" />
+      </rect>
+      <rect x="134" width="18" height="3" rx="1" fill="#58a6ff">
+        <animate attributeName="y" values="67;42;112;67;67" dur="1.7s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Floating White Cube -->
+    <rect x="12" y="68" width="24" height="24" rx="4" fill="#f0f6fc">
+      <animate attributeName="y" values="68;56;68" dur="3s" repeatCount="indefinite" />
+    </rect>
   </g>
 
-  <!-- RIGHT: MINIMALIST GEOMETRIC ACOUSTIC BARS & FLOATING CUBES -->
-  <g transform="translate(760, 0)">
-    <!-- Standing Wave Reference Curve -->
-    <path d="M 0 160 Q 80 80, 160 160 T 320 160" fill="none" stroke="#21262d" stroke-width="1.5" stroke-dasharray="3 4" />
-    <path d="M 20 160 Q 95 100, 170 160 T 320 160" fill="none" stroke="#58a6ff" stroke-width="2" stroke-opacity="0.8" />
+  <!-- CENTER: BOLD HERO TYPOGRAPHY (PERFECTLY CENTER ALIGNED) -->
+  <g>
+    <!-- Top Lead-in -->
+    <text x="600" y="58" class="mono" font-size="13" font-weight="600" fill="#8b949e" letter-spacing="3" text-anchor="middle">HELLO, I'M · สวัสดีครับ ผม</text>
 
-    <!-- Minimalist 3D-Style Amplitude Equalizer Bars -->
-    <rect x="80" y="140" width="30" height="70" rx="3" fill="#14161a" stroke="#21262d" stroke-width="1" />
-    <rect x="120" y="115" width="30" height="95" rx="3" fill="#181a20" stroke="#30363d" stroke-width="1" />
-    <rect x="160" y="90" width="30" height="120" rx="3" fill="#1c2028" stroke="#30363d" stroke-width="1" />
-    <rect x="200" y="65" width="30" height="145" rx="3" fill="#202632" stroke="#58a6ff" stroke-width="1.2" stroke-opacity="0.6" />
+    <!-- Big Bold Hero Name (Center Aligned) -->
+    <text x="600" y="136" class="big" font-size="82" fill="#f0f6fc" text-anchor="middle">ZEDRAYAMI<tspan fill="#58a6ff">.</tspan></text>
 
-    <!-- Floating Geometric Cubes -->
-    <rect x="25" y="138" width="32" height="32" rx="4" fill="#f0f6fc">
-      <animate attributeName="y" values="138;132;138" dur="3s" repeatCount="indefinite" />
-    </rect>
+    <!-- Handle with Blinking Block Cursor -->
+    <text x="600" y="174" class="mono" font-size="18" font-weight="700" fill="#58a6ff" text-anchor="middle">&gt; Zed<tspan fill="#58a6ff">█<animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" calcMode="discrete" /></tspan></text>
 
-    <rect x="235" y="42" width="20" height="20" rx="3" fill="#58a6ff">
-      <animate attributeName="y" values="42;35;42" dur="2.4s" repeatCount="indefinite" />
+    <!-- Thai Tagline in Clean Loopless Thai Font -->
+    <text x="600" y="210" class="thm" font-size="16" font-weight="500" fill="#f0f6fc" text-anchor="middle">สำรวจจุดที่ซอฟต์แวร์เชื่อมต่อกับโลกความจริง</text>
+
+    <!-- Focus Domains -->
+    <text x="600" y="244" class="mono" font-size="11.5" font-weight="600" fill="#58a6ff" letter-spacing="1.5" text-anchor="middle">COMPETITIVE PROGRAMMING · AIoT · SCIENTIFIC COMPUTING · WEB DEV</text>
+  </g>
+
+  <!-- RIGHT VISUALIZER: CHANNEL R (WAVE + 4 EQUALIZER BARS + BLUE CUBE) -->
+  <g transform="translate(905, 0)">
+    <!-- Baseline & Grid -->
+    <line x1="0" y1="210" x2="250" y2="210" stroke="#21262d" stroke-width="1.5" />
+    <line x1="0" y1="150" x2="250" y2="150" stroke="#1c2028" stroke-width="1" stroke-dasharray="3 4" />
+    <text x="165" y="228" class="mono" font-size="9" fill="#484f58">CH-R · LIVE</text>
+    <circle cx="235" cy="225" r="3" fill="#58a6ff">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Oscillating SSAW Standing Wave Curve (Inverted Phase) -->
+    <path fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-opacity="0.8">
+      <animate attributeName="d" 
+        values="M 0 150 Q 62.5 210, 125 150 T 250 150;
+                M 0 150 Q 62.5 150, 125 150 T 250 150;
+                M 0 150 Q 62.5 90, 125 150 T 250 150;
+                M 0 150 Q 62.5 150, 125 150 T 250 150;
+                M 0 150 Q 62.5 210, 125 150 T 250 150" 
+        dur="3s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Fast Data Pulse Packet on Wave -->
+    <path d="M 0 150 Q 62.5 190, 125 150 T 250 150" fill="none" stroke="#f0f6fc" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="14 236">
+      <animate attributeName="stroke-dashoffset" values="0;-250" dur="2s" repeatCount="indefinite" />
+    </path>
+
+    <!-- 4 Dynamic Bouncing Equalizer Bars (Channel R) -->
+    <!-- Bar R1 -->
+    <g>
+      <rect x="98" width="18" rx="3" fill="#1f2838" stroke="#58a6ff" stroke-width="1.2">
+        <animate attributeName="y" values="75;50;120;75;75" dur="1.9s" repeatCount="indefinite" />
+        <animate attributeName="height" values="135;160;90;135;135" dur="1.9s" repeatCount="indefinite" />
+      </rect>
+      <rect x="98" width="18" height="3" rx="1" fill="#58a6ff">
+        <animate attributeName="y" values="67;42;112;67;67" dur="1.9s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Bar R2 -->
+    <g>
+      <rect x="126" width="18" rx="3" fill="#1c2028" stroke="#388bfd" stroke-width="1" stroke-opacity="0.6">
+        <animate attributeName="y" values="105;65;140;80;105" dur="2.2s" repeatCount="indefinite" />
+        <animate attributeName="height" values="105;145;70;130;105" dur="2.2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="126" width="18" height="2.5" rx="1" fill="#f0f6fc">
+        <animate attributeName="y" values="98;58;133;73;98" dur="2.2s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Bar R3 -->
+    <g>
+      <rect x="154" width="18" rx="3" fill="#181a20" stroke="#30363d" stroke-width="1">
+        <animate attributeName="y" values="125;85;150;60;125" dur="1.7s" repeatCount="indefinite" />
+        <animate attributeName="height" values="85;125;60;150;85" dur="1.7s" repeatCount="indefinite" />
+      </rect>
+      <rect x="154" width="18" height="2.5" rx="1" fill="#58a6ff">
+        <animate attributeName="y" values="118;78;143;53;118" dur="1.7s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Bar R4 -->
+    <g>
+      <rect x="182" width="18" rx="3" fill="#14161a" stroke="#21262d" stroke-width="1">
+        <animate attributeName="y" values="155;110;165;130;155" dur="2.4s" repeatCount="indefinite" />
+        <animate attributeName="height" values="55;100;45;80;55" dur="2.4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="182" width="18" height="2.5" rx="1" fill="#58a6ff" opacity="0.8">
+        <animate attributeName="y" values="148;103;158;123;148" dur="2.4s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Floating Blue Cube -->
+    <rect x="214" y="68" width="24" height="24" rx="4" fill="#58a6ff">
+      <animate attributeName="y" values="68;56;68" dur="2.6s" repeatCount="indefinite" />
     </rect>
   </g>
 </svg>
