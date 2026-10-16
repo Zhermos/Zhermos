@@ -2,19 +2,19 @@
   <style>
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
-    .card-title { font-size: 20px; font-weight: 700; fill: #f0f6fc; letter-spacing: 0.5px; }
-    .card-num { font-size: 13px; font-weight: 600; fill: #58a6ff; }
+    .card-title { font-size: 18.5px; font-weight: 700; fill: #f0f6fc; letter-spacing: 0.3px; }
+    .card-num { font-size: 12.5px; font-weight: 600; fill: #58a6ff; letter-spacing: 0.5px; }
     .card-desc { font-size: 14px; fill: #8b949e; }
     .chip-text { font-size: 11px; font-weight: 500; fill: #c9d1d9; }
   </style>
 
-  <!-- ================= CARD 01: COMPETITIVE PROGRAMMING ================= -->
+  <!-- ================= CARD 01: COMPETITIVE PROGRAMMING & ALGORITHMS ================= -->
   <g transform="translate(10, 10)">
     <rect width="575" height="250" rx="14" fill="#111113" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
     
     <rect x="32" y="30" width="8" height="8" rx="2" fill="#58a6ff" />
-    <text x="48" y="38" class="mono card-num">01 // ALGORITHMS &amp; DATA STRUCTURES</text>
-    <text x="32" y="78" class="sans card-title">COMPETITIVE PROGRAMMING<tspan fill="#58a6ff">.</tspan></text>
+    <text x="48" y="38" class="mono card-num">01 // PROBLEM SOLVING</text>
+    <text x="32" y="78" class="sans card-title">COMPETITIVE PROGRAMMING &amp; ALGORITHMS<tspan fill="#58a6ff">.</tspan></text>
     
     <text x="32" y="112" class="sans card-desc">แข่งแก้โจทย์ปัญหาเชิงคำนวณและสอวน.คอม</text>
     <text x="32" y="136" class="sans card-desc">ออกแบบอัลกอริทึมและโครงสร้างข้อมูลขั้นสูง</text>
@@ -49,13 +49,13 @@
     </g>
   </g>
 
-  <!-- ================= CARD 02: EDGE AI & IoT ================= -->
+  <!-- ================= CARD 02: AIoT & COMPUTER VISION ================= -->
   <g transform="translate(615, 10)">
     <rect width="575" height="250" rx="14" fill="#111113" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
     
     <rect x="32" y="30" width="8" height="8" rx="2" fill="#58a6ff" />
-    <text x="48" y="38" class="mono card-num">02 // PERCEPTION LAYER</text>
-    <text x="32" y="78" class="sans card-title">EDGE AI &amp; IoT<tspan fill="#58a6ff">.</tspan></text>
+    <text x="48" y="38" class="mono card-num">02 // EMBEDDED AI</text>
+    <text x="32" y="78" class="sans card-title">AIoT &amp; COMPUTER VISION<tspan fill="#58a6ff">.</tspan></text>
     
     <text x="32" y="112" class="sans card-desc">ระบบตรวจจับอาวุธและพฤติกรรม Real-time</text>
     <text x="32" y="136" class="sans card-desc">ประมวลผล Vision AI บนอุปกรณ์ฝังตัว</text>
@@ -71,7 +71,7 @@
       <text x="206" y="17" class="mono chip-text" text-anchor="middle">OpenCV</text>
     </g>
 
-    <!-- Graphic: Target Reticle -->
+    <!-- Graphic: Vision Target Reticle -->
     <g transform="translate(480, 125)">
       <rect x="-35" y="-35" width="70" height="70" rx="6" fill="#18181b" stroke="#27272a" stroke-width="1" />
       <circle cx="0" cy="0" r="26" fill="none" stroke="#3f3f46" stroke-dasharray="3 3" />
@@ -84,13 +84,13 @@
     </g>
   </g>
 
-  <!-- ================= CARD 03: ACOUSTOFLUIDICS & SCIENCE ================= -->
+  <!-- ================= CARD 03: SCIENTIFIC COMPUTING ================= -->
   <g transform="translate(10, 280)">
     <rect width="575" height="250" rx="14" fill="#111113" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
     
     <rect x="32" y="30" width="8" height="8" rx="2" fill="#58a6ff" />
-    <text x="48" y="38" class="mono card-num">03 // PHYSICAL LAYER</text>
-    <text x="32" y="78" class="sans card-title">ACOUSTOFLUIDICS &amp; SCIENCE<tspan fill="#58a6ff">.</tspan></text>
+    <text x="48" y="38" class="mono card-num">03 // PHYSICAL SIMULATION</text>
+    <text x="32" y="78" class="sans card-title">SCIENTIFIC COMPUTING<tspan fill="#58a6ff">.</tspan></text>
     
     <text x="32" y="112" class="sans card-desc">จำลองและควบคุมอนุภาคระดับนาโน</text>
     <text x="32" y="136" class="sans card-desc">ด้วยแรงกลจากคลื่นเสียงความถี่สูง (SSAW)</text>
@@ -117,13 +117,13 @@
     </g>
   </g>
 
-  <!-- ================= CARD 04: WEB DEV & CIVIC TECH ================= -->
+  <!-- ================= CARD 04: WEB DEVELOPMENT ================= -->
   <g transform="translate(615, 280)">
     <rect width="575" height="250" rx="14" fill="#111113" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
     
     <rect x="32" y="30" width="8" height="8" rx="2" fill="#58a6ff" />
-    <text x="48" y="38" class="mono card-num">04 // CIVIC RESILIENCE</text>
-    <text x="32" y="78" class="sans card-title">WEB DEV &amp; CIVIC TECH<tspan fill="#58a6ff">.</tspan></text>
+    <text x="48" y="38" class="mono card-num">04 // CIVIC PLATFORMS</text>
+    <text x="32" y="78" class="sans card-title">WEB DEVELOPMENT<tspan fill="#58a6ff">.</tspan></text>
     
     <text x="32" y="112" class="sans card-desc">แพลตฟอร์มสนับสนุนการรับมือน้ำท่วม</text>
     <text x="32" y="136" class="sans card-desc">รายงานจุดเสี่ยงและประสานงานกู้ภัยสาธารณะ</text>
