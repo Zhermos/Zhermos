@@ -1,177 +1,160 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 300" width="100%" height="300" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 260" width="100%" height="260" fill="none">
   <defs>
-    <!-- Background Dark Slate Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="100%" stop-color="#05080f" />
+    <!-- Dark Onyx Background -->
+    <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="100%" stop-color="#020306" />
     </linearGradient>
 
-    <!-- Column Edge Accents -->
-    <linearGradient id="columnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="100%" stop-color="#0b101b" />
+    <!-- Wave Gradients -->
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#6366f1" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </linearGradient>
 
-    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#2563eb" />
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0" />
+      <stop offset="40%" stop-color="#3b82f6" stop-opacity="0.5" />
+      <stop offset="80%" stop-color="#06b6d4" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Subtle Ambient Glow -->
-    <radialGradient id="rightAmbient" cx="80%" cy="60%" r="50%">
-      <stop offset="0%" stop-color="#1e40af" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#090d16" stop-opacity="0" />
-    </radialGradient>
+    <!-- Ambient Glow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
 
-    <!-- Technical Dot Grid -->
-    <pattern id="dotGrid" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.1" fill="#334155" opacity="0.35" />
+    <!-- Subdued Grid -->
+    <pattern id="fineGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />
     </pattern>
 
     <style>
-      .sf-mono {
-        font-family: "SF Mono", Monaco, "Cascadia Code", "Courier New", monospace;
-      }
       .sf-display {
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
       }
-      .thai-font {
+      .sf-mono {
+        font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+      }
+      .thai-text {
         font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Sukhumvit Set", "Thonburi", sans-serif;
       }
 
-      /* Animated Blinking Block Cursor */
-      .blinking-cursor {
-        animation: blink 1s step-end infinite;
+      /* Sine Wave Oscillation */
+      .wave-1 {
+        animation: waveFlow 7s ease-in-out infinite alternate;
       }
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
+      .wave-2 {
+        animation: waveFlowRev 9s ease-in-out infinite alternate;
       }
-
-      /* Floating Levitating Cube */
-      .floating-cube {
-        animation: floatLevitate 3.4s ease-in-out infinite alternate;
+      @keyframes waveFlow {
+        0% { transform: translateY(0px) scaleY(1); }
+        50% { transform: translateY(-8px) scaleY(1.15); }
+        100% { transform: translateY(6px) scaleY(0.9); }
       }
-      @keyframes floatLevitate {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-12px); }
-        100% { transform: translateY(-4px); }
-      }
-
-      /* Floating Accent Diamond */
-      .floating-diamond {
-        animation: diamondPulse 2.8s ease-in-out infinite alternate;
-      }
-      @keyframes diamondPulse {
-        0% { transform: translate(0, 0) rotate(45deg); opacity: 0.85; }
-        100% { transform: translate(2px, -3px) rotate(45deg); opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
+      @keyframes waveFlowRev {
+        0% { transform: translateY(0px) scaleY(1); }
+        50% { transform: translateY(7px) scaleY(0.85); }
+        100% { transform: translateY(-9px) scaleY(1.12); }
       }
 
-      /* Stepped Pillar Subtle Breathe */
-      .pillar-top-glow {
-        animation: topSheen 4s ease-in-out infinite alternate;
+      /* Harmonic Pulse Point */
+      .pulse-node {
+        animation: pulseBeacon 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
       }
-      @keyframes topSheen {
-        0% { opacity: 0.6; }
-        100% { opacity: 1; }
+      @keyframes pulseBeacon {
+        0%, 100% { opacity: 0.4; r: 3px; }
+        50% { opacity: 1; r: 5.5px; filter: drop-shadow(0 0 8px #38bdf8); }
+      }
+
+      /* Live System Dot */
+      .status-live {
+        animation: liveBlink 2s ease-in-out infinite;
+      }
+      @keyframes liveBlink {
+        0%, 100% { opacity: 0.9; }
+        50% { opacity: 0.35; }
       }
     </style>
   </defs>
 
-  <!-- Base Canvas Card -->
-  <rect x="1" y="1" width="918" height="298" rx="16" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2" />
+  <!-- Frame -->
+  <rect x="1" y="1" width="918" height="258" rx="18" fill="url(#canvasBg)" stroke="rgba(255, 255, 255, 0.07)" stroke-width="1.2" />
+  
+  <!-- Subtle Grid -->
+  <rect x="2" y="2" width="916" height="256" rx="17" fill="url(#fineGrid)" />
 
-  <!-- Technical Background Dot Matrix -->
-  <rect x="2" y="2" width="916" height="296" rx="15" fill="url(#dotGrid)" />
-
-  <!-- Ambient Light Right Side -->
-  <rect x="400" y="2" width="518" height="296" rx="15" fill="url(#rightAmbient)" />
-
-  <!-- ================= LEFT CONTENT COLUMN ================= -->
-
-  <!-- Top Eyebrow Track -->
-  <g transform="translate(54, 58)">
-    <text class="sf-mono" font-size="12" font-weight="600" fill="#64748b" letter-spacing="2.4">
-      HELLO, I'M <tspan fill="#38bdf8">·</tspan> <tspan class="thai-font" font-size="12" font-weight="400" fill="#475569">สวัสดีครับ ผม</tspan>
+  <!-- ================= LEFT: TYPOGRAPHY & IDENTITY ================= -->
+  <!-- Status Badge Line -->
+  <g transform="translate(56, 52)">
+    <circle class="status-live" cx="4" cy="4" r="3.5" fill="#10b981" />
+    <text x="16" y="8" class="sf-mono" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.8">
+      CORE ACTIVE <tspan fill="#334155">|</tspan> @ZHERMOS
     </text>
   </g>
 
-  <!-- Giant Hero Name: ZEDRAYAMI. -->
-  <g transform="translate(54, 134)">
-    <text class="sf-display" font-size="74" font-weight="900" fill="#ffffff" letter-spacing="-1">
+  <!-- Giant Hero Name -->
+  <g transform="translate(56, 126)">
+    <text class="sf-display" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-1.5">
       ZEDRAYAMI
     </text>
-    <!-- Rotated Accent Cyan Diamond -->
-    <rect class="floating-diamond" x="432" y="-18" width="13" height="13" rx="2.5" fill="#38bdf8" />
   </g>
 
-  <!-- Terminal Typing Command Line -->
-  <g transform="translate(54, 178)">
-    <text class="sf-mono" font-size="18" font-weight="700" fill="#38bdf8">&gt;</text>
-    <text class="sf-mono" x="22" y="0" font-size="16" font-weight="600" fill="#f1f5f9" letter-spacing="0.5">
-      Swift Architect &amp; ML Engineer
-    </text>
-    <rect class="blinking-cursor" x="312" y="-14" width="11" height="17" fill="#38bdf8" rx="1" />
-  </g>
-
-  <!-- Thai Real Name Subtitle -->
-  <g transform="translate(54, 222)">
-    <text class="thai-font" font-size="19" font-weight="600" fill="#e2e8f0" letter-spacing="0.4">
+  <!-- Thai Name & Title -->
+  <g transform="translate(56, 168)">
+    <text class="thai-text" font-size="16" font-weight="500" fill="#94a3b8" letter-spacing="0.3">
       ชนน์ปภพ ดีจริง
-      <tspan class="sf-display" font-size="14" font-weight="500" fill="#64748b" letter-spacing="0.5"> (@Zhermos)</tspan>
+      <tspan class="sf-display" fill="#475569"> — </tspan>
+      <tspan class="sf-display" fill="#cbd5e1" font-weight="600">iOS &amp; Bio-Computational Systems</tspan>
     </text>
   </g>
 
-  <!-- Bottom Mottos & Technical Status -->
-  <g transform="translate(54, 260)">
-    <text class="sf-mono" font-size="11" font-weight="600" fill="#64748b" letter-spacing="2.8">
-      FAIL FAST. LEARN FAST. <tspan fill="#38bdf8">■</tspan>
+  <!-- Technical Spec Footprint -->
+  <g transform="translate(56, 214)">
+    <line x1="0" y1="0" x2="380" y2="0" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+    <text y="20" class="sf-mono" font-size="10.5" font-weight="500" fill="#475569" letter-spacing="2">
+      SWIFT ARCHITECTURE  <tspan fill="#334155">•</tspan>  AI VISION  <tspan fill="#334155">•</tspan>  PRECISION
     </text>
   </g>
 
-  <!-- ================= RIGHT GEOMETRIC ARCHITECTURE ================= -->
-  <!-- Stepped Monolith Columns (Original Minimal Architecture) -->
-  <g transform="translate(640, 70)">
-    <!-- Baseline Guide -->
-    <line x1="0" y1="190" x2="220" y2="190" stroke="rgba(255, 255, 255, 0.07)" stroke-width="1" />
+  <!-- ================= RIGHT: MATHEMATICAL HARMONIC WAVEFORM ================= -->
+  <!-- (Original Vector Waves representing Algorithmic / Signal Computing) -->
+  <g transform="translate(480, 0)">
+    <!-- Ambient Wave Backlight -->
+    <ellipse cx="220" cy="130" rx="140" ry="60" fill="#1e3a8a" opacity="0.18" filter="url(#softGlow)" />
 
-    <!-- Pillar 1 (Lowest) -->
-    <g transform="translate(10, 165)">
-      <rect width="48" height="25" rx="3" fill="url(#columnGrad)" stroke="rgba(255, 255, 255, 0.06)" />
-      <line class="pillar-top-glow" x1="0" y1="0" x2="48" y2="0" stroke="#38bdf8" stroke-width="2.5" />
+    <!-- Technical Vertical Coordinate Guides -->
+    <line x1="100" y1="40" x2="100" y2="220" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" stroke-dasharray="3 3" />
+    <line x1="220" y1="40" x2="220" y2="220" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" stroke-dasharray="3 3" />
+    <line x1="340" y1="40" x2="340" y2="220" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" stroke-dasharray="3 3" />
+
+    <!-- Wave Layer 2 (Cyan Secondary) -->
+    <g class="wave-2">
+      <path d="M 30,145 C 90,95 160,185 230,135 C 300,85 360,165 410,130" 
+            fill="none" stroke="url(#waveGrad2)" stroke-width="2" stroke-linecap="round" />
     </g>
 
-    <!-- Pillar 2 -->
-    <g transform="translate(68, 140)">
-      <rect width="48" height="50" rx="3" fill="url(#columnGrad)" stroke="rgba(255, 255, 255, 0.06)" />
-      <line class="pillar-top-glow" x1="0" y1="0" x2="48" y2="0" stroke="#38bdf8" stroke-width="2.5" />
+    <!-- Wave Layer 1 (Electric Sapphire / Violet Primary) -->
+    <g class="wave-1">
+      <path d="M 20,130 C 80,180 150,80 220,130 C 290,180 350,90 410,135" 
+            fill="none" stroke="url(#waveGrad1)" stroke-width="2.8" stroke-linecap="round" filter="url(#softGlow)" />
     </g>
 
-    <!-- Pillar 3 -->
-    <g transform="translate(126, 115)">
-      <rect width="48" height="75" rx="3" fill="url(#columnGrad)" stroke="rgba(255, 255, 255, 0.06)" />
-      <line class="pillar-top-glow" x1="0" y1="0" x2="48" y2="0" stroke="#38bdf8" stroke-width="2.5" />
-    </g>
+    <!-- Harmonic Interactive Nodes -->
+    <circle class="pulse-node" cx="220" cy="130" r="4" fill="#38bdf8" />
+    <circle cx="150" cy="105" r="2.5" fill="#818cf8" opacity="0.8" />
+    <circle cx="290" cy="155" r="2.5" fill="#c084fc" opacity="0.8" />
+    <circle cx="350" cy="112" r="2" fill="#38bdf8" opacity="0.6" />
 
-    <!-- Pillar 4 (Highest) -->
-    <g transform="translate(184, 90)">
-      <rect width="48" height="100" rx="3" fill="url(#columnGrad)" stroke="rgba(255, 255, 255, 0.06)" />
-      <line class="pillar-top-glow" x1="0" y1="0" x2="48" y2="0" stroke="#38bdf8" stroke-width="2.5" />
-    </g>
-
-    <!-- Floating Levitating Hero Block 1 (Above Pillar 3) -->
-    <g class="floating-cube" transform="translate(136, 52)">
-      <rect width="28" height="28" rx="4" fill="#ffffff" filter="drop-shadow(0 4px 12px rgba(255,255,255,0.4))" />
-    </g>
-
-    <!-- Floating Mini Orbit Cube 2 (Above Pillar 4, Top Right) -->
-    <g class="floating-cube" style="animation-delay: -1.7s;" transform="translate(198, 15)">
-      <rect width="18" height="18" rx="3" fill="#38bdf8" filter="drop-shadow(0 0 10px rgba(56,189,248,0.7))" />
-    </g>
-
-    <!-- Subtle Technical Axis Metric Marks -->
-    <line x1="230" y1="90" x2="236" y2="90" stroke="#475569" stroke-width="1" />
-    <line x1="230" y1="140" x2="236" y2="140" stroke="#475569" stroke-width="1" />
-    <line x1="230" y1="190" x2="236" y2="190" stroke="#475569" stroke-width="1" />
+    <!-- Coordinate Metrics (Subtle & Formal) -->
+    <text x="390" y="55" class="sf-mono" font-size="9" fill="#334155" text-anchor="end" letter-spacing="1">
+      HARMONIC MATRIX // 60Hz
+    </text>
   </g>
 </svg>
