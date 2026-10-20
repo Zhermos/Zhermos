@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 300" width="100%" height="300" fill="none">
+  <defs>
+    <!-- Background Dark Slate Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#05080f" />
+    </linearGradient>
+
+    <!-- Column Edge Accents -->
+    <linearGradient id="columnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0b101b" />
+    </linearGradient>
+
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <!-- Subtle Ambient Glow -->
+    <radialGradient id="rightAmbient" cx="80%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#1e40af" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Technical Dot Grid -->
+    <pattern id="dotGrid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#334155" opacity="0.35" />
+    </pattern>
+
+    <style>
+      .sf-mono {
+        font-family: "SF Mono", Monaco, "Cascadia Code", "Courier New", monospace;
+      }
+      .sf-display {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+      }
+      .thai-font {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Sukhumvit Set", "Thonburi", sans-serif;
+      }
+
+      /* Animated Blinking Block Cursor */
+      .blinking-cursor {
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* Floating Levitating Cube */
+      .floating-cube {
+        animation: floatLevitate 3.4s ease-in-out infinite alternate;
+      }
+      @keyframes floatLevitate {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(-4px); }
+      }
+
+      /* Floating Accent Diamond */
+      .floating-diamond {
+        animation: diamondPulse 2.8s ease-in-out infinite alternate;
+      }
+      @keyframes diamondPulse {
+        0% { transform: translate(0, 0) rotate(45deg); opacity: 0.85; }
+        100% { transform: translate(2px, -3px) rotate(45deg); opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
+      }
+
+      /* Stepped Pillar Subtle Breathe */
+      .pillar-top-glow {
+        animation: topSheen 4s ease-in-out infinite alternate;
+      }
+      @keyframes topSheen {
+        0% { opacity: 0.6; }
+        100% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas Card -->
+  <rect x="1" y="1" width="918" height="298" rx="16" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2" />
+
+  <!-- Technical Background Dot Matrix -->
+  <rect x="2" y="2" width="916" height="296" rx="15" fill="url(#dotGrid)" />
+
+  <!-- Ambient Light Right Side -->
+  <rect x="400" y="2" width="518" height="296" rx="15" fill="url(#rightAmbient)" />
+
+  <!-- ================= LEFT CONTENT COLUMN ================= -->
+
+  <!-- Top Eyebrow Track -->
+  <g transform="translate(54, 58)">
+    <text class="sf-mono" font-size="12" font-weight="600" fill="#64748b" letter-spacing="2.4">
+      HELLO, I'M <tspan fill="#38bdf8">·</tspan> <tspan class="thai-font" font-size="12" font-weight="400" fill="#475569">สวัสดีครับ ผม</tspan>
+    </text>
+  </g>
+
+  <!-- Giant Hero Name: ZEDRAYAMI. -->
+  <g transform="translate(54, 134)">
+    <text class="sf-display" font-size="74" font-weight="900" fill="#ffffff" letter-spacing="-1">
+      ZEDRAYAMI
+    </text>
+    <!-- Rotated Accent Cyan Diamond -->
+    <rect class="floating-diamond" x="432" y="-18" width="13" height="13" rx="2.5" fill="#38bdf8" />
+  </g>
+
+  <!-- Terminal Typing Command Line -->
+  <g transform="translate(54, 178)">
+    <text class="sf-mono" font-size="18" font-weight="700" fill="#38bdf8">&gt;</text>
+    <text class="sf-mono" x="22" y="0" font-size="16" font-weight="600" fill="#f1f5f9" letter-spacing="0.5">
+      Swift Architect &amp; ML Engineer
+    </text>
+    <rect class="blinking-cursor" x="312" y="-14" width="11" height="17" fill="#38bdf8" rx="1" />
+  </g>
+
+  <!-- Thai Real Name Subtitle -->
+  <g transform="translate(54, 222)">
+    <text class="thai-font" font-size="19" font-weight="600" fill="#e2e8f0" letter-spacing="0.4">
+      ชนน์ปภพ ดีจริง
+      <tspan class="sf-display" font-size="14" font-weight="500" fill="#64748b" letter-spacing="0.5"> (@Zhermos)</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom Mottos & Technical Status -->
+  <g transform="translate(54, 260)">
+    <text class="sf-mono" font-size="11" font-weight="600" fill="#64748b" letter-spacing="2.8">
+      FAIL FAST. LEARN FAST. <tspan fill="#38bdf8">■</tspan>
+    </text>
+  </g>
+
+  <!-- ================= RIGHT GEOMETRIC ARCHITECTURE ================= -->
+  <!-- Stepped Monolith Columns (Original Minimal Architecture) -->
+  <g transform="translate(640, 70)">
+    <!-- Baseline Guide -->
+    <line x1="0" y1="190" x2="220" y2="190" stroke="rgba(255, 255, 255, 0.07)" stroke-width="1" />
+
+    <!-- Pillar 1 (Lowest) -->
+    <g transform="translate(10, 165)">
+      <rect width="48" height="25" rx="3" fill="url(#columnGrad)" stroke="rgba(255, 255, 255, 0.06)" />
+      <line class="pillar-top-glow" x1="0" y1="0" x2="48" y2="0" stroke="#38bdf8" stroke-width="2.5" />
+    </g>
+
+    <!-- Pillar 2 -->
+    <g transform="translate(68, 140)">
+      <rect width="48" height="50" rx="3" fill="url(#columnGrad)" stroke="rgba(255, 255, 255, 0.06)" />
+      <line class="pillar-top-glow" x1="0" y1="0" x2="48" y2="0" stroke="#38bdf8" stroke-width="2.5" />
+    </g>
+
+    <!-- Pillar 3 -->
+    <g transform="translate(126, 115)">
+      <rect width="48" height="75" rx="3" fill="url(#columnGrad)" stroke="rgba(255, 255, 255, 0.06)" />
+      <line class="pillar-top-glow" x1="0" y1="0" x2="48" y2="0" stroke="#38bdf8" stroke-width="2.5" />
+    </g>
+
+    <!-- Pillar 4 (Highest) -->
+    <g transform="translate(184, 90)">
+      <rect width="48" height="100" rx="3" fill="url(#columnGrad)" stroke="rgba(255, 255, 255, 0.06)" />
+      <line class="pillar-top-glow" x1="0" y1="0" x2="48" y2="0" stroke="#38bdf8" stroke-width="2.5" />
+    </g>
+
+    <!-- Floating Levitating Hero Block 1 (Above Pillar 3) -->
+    <g class="floating-cube" transform="translate(136, 52)">
+      <rect width="28" height="28" rx="4" fill="#ffffff" filter="drop-shadow(0 4px 12px rgba(255,255,255,0.4))" />
+    </g>
+
+    <!-- Floating Mini Orbit Cube 2 (Above Pillar 4, Top Right) -->
+    <g class="floating-cube" style="animation-delay: -1.7s;" transform="translate(198, 15)">
+      <rect width="18" height="18" rx="3" fill="#38bdf8" filter="drop-shadow(0 0 10px rgba(56,189,248,0.7))" />
+    </g>
+
+    <!-- Subtle Technical Axis Metric Marks -->
+    <line x1="230" y1="90" x2="236" y2="90" stroke="#475569" stroke-width="1" />
+    <line x1="230" y1="140" x2="236" y2="140" stroke="#475569" stroke-width="1" />
+    <line x1="230" y1="190" x2="236" y2="190" stroke="#475569" stroke-width="1" />
+  </g>
+</svg>
