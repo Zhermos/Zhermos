@@ -1,160 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 260" width="100%" height="260" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" height="220" fill="none">
   <defs>
-    <!-- Dark Onyx Background -->
-    <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07090e" />
-      <stop offset="100%" stop-color="#020306" />
+    <!-- Deep Space Black Background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0d" />
+      <stop offset="100%" stop-color="#000000" />
     </linearGradient>
 
-    <!-- Wave Gradients -->
-    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
-      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.8" />
-      <stop offset="70%" stop-color="#6366f1" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    <!-- Liquid Metallic Shimmer Animation -->
+    <linearGradient id="nameShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="25%" stop-color="#cbd5e1" />
+      <stop offset="45%" stop-color="#ffffff" />
+      <stop offset="55%" stop-color="#38bdf8" />
+      <stop offset="70%" stop-color="#ffffff" />
+      <stop offset="85%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#475569" />
+      <animate attributeName="x1" from="-100%" to="100%" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" from="0%" to="200%" dur="5.5s" repeatCount="indefinite" />
     </linearGradient>
 
-    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2563eb" stop-opacity="0" />
-      <stop offset="40%" stop-color="#3b82f6" stop-opacity="0.5" />
-      <stop offset="80%" stop-color="#06b6d4" stop-opacity="0.7" />
-      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
-    </linearGradient>
-
-    <!-- Ambient Glow Filter -->
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <!-- Subtle Ambient Core Glow Behind Name -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="50" />
     </filter>
 
-    <!-- Subdued Grid -->
-    <pattern id="fineGrid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />
-    </pattern>
-
     <style>
-      .sf-display {
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-      }
-      .sf-mono {
-        font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
-      }
-      .thai-text {
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Sukhumvit Set", "Thonburi", sans-serif;
+      .sf-heavy {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+        font-weight: 800;
+        text-anchor: middle;
+        dominant-baseline: central;
       }
 
-      /* Sine Wave Oscillation */
-      .wave-1 {
-        animation: waveFlow 7s ease-in-out infinite alternate;
+      /* Slow Breathing Ambient Aura */
+      .ambient-glow {
+        animation: glowPulse 7s ease-in-out infinite alternate;
+        transform-origin: center;
       }
-      .wave-2 {
-        animation: waveFlowRev 9s ease-in-out infinite alternate;
-      }
-      @keyframes waveFlow {
-        0% { transform: translateY(0px) scaleY(1); }
-        50% { transform: translateY(-8px) scaleY(1.15); }
-        100% { transform: translateY(6px) scaleY(0.9); }
-      }
-      @keyframes waveFlowRev {
-        0% { transform: translateY(0px) scaleY(1); }
-        50% { transform: translateY(7px) scaleY(0.85); }
-        100% { transform: translateY(-9px) scaleY(1.12); }
-      }
-
-      /* Harmonic Pulse Point */
-      .pulse-node {
-        animation: pulseBeacon 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-      }
-      @keyframes pulseBeacon {
-        0%, 100% { opacity: 0.4; r: 3px; }
-        50% { opacity: 1; r: 5.5px; filter: drop-shadow(0 0 8px #38bdf8); }
-      }
-
-      /* Live System Dot */
-      .status-live {
-        animation: liveBlink 2s ease-in-out infinite;
-      }
-      @keyframes liveBlink {
-        0%, 100% { opacity: 0.9; }
-        50% { opacity: 0.35; }
+      @keyframes glowPulse {
+        0% { opacity: 0.15; transform: scale(0.9); }
+        50% { opacity: 0.45; transform: scale(1.1); }
+        100% { opacity: 0.2; transform: scale(0.95); }
       }
     </style>
   </defs>
 
-  <!-- Frame -->
-  <rect x="1" y="1" width="918" height="258" rx="18" fill="url(#canvasBg)" stroke="rgba(255, 255, 255, 0.07)" stroke-width="1.2" />
-  
-  <!-- Subtle Grid -->
-  <rect x="2" y="2" width="916" height="256" rx="17" fill="url(#fineGrid)" />
+  <!-- Canvas Frame -->
+  <rect width="900" height="220" rx="20" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2" />
 
-  <!-- ================= LEFT: TYPOGRAPHY & IDENTITY ================= -->
-  <!-- Status Badge Line -->
-  <g transform="translate(56, 52)">
-    <circle class="status-live" cx="4" cy="4" r="3.5" fill="#10b981" />
-    <text x="16" y="8" class="sf-mono" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.8">
-      CORE ACTIVE <tspan fill="#334155">|</tspan> @ZHERMOS
-    </text>
+  <!-- Soft Ambient Glow (Behind Name Only) -->
+  <g filter="url(#softGlow)" class="ambient-glow">
+    <ellipse cx="450" cy="110" rx="240" ry="50" fill="#2563eb" />
   </g>
 
-  <!-- Giant Hero Name -->
-  <g transform="translate(56, 126)">
-    <text class="sf-display" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-1.5">
-      ZEDRAYAMI
-    </text>
-  </g>
-
-  <!-- Thai Name & Title -->
-  <g transform="translate(56, 168)">
-    <text class="thai-text" font-size="16" font-weight="500" fill="#94a3b8" letter-spacing="0.3">
-      ชนน์ปภพ ดีจริง
-      <tspan class="sf-display" fill="#475569"> — </tspan>
-      <tspan class="sf-display" fill="#cbd5e1" font-weight="600">iOS &amp; Bio-Computational Systems</tspan>
-    </text>
-  </g>
-
-  <!-- Technical Spec Footprint -->
-  <g transform="translate(56, 214)">
-    <line x1="0" y1="0" x2="380" y2="0" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
-    <text y="20" class="sf-mono" font-size="10.5" font-weight="500" fill="#475569" letter-spacing="2">
-      SWIFT ARCHITECTURE  <tspan fill="#334155">•</tspan>  AI VISION  <tspan fill="#334155">•</tspan>  PRECISION
-    </text>
-  </g>
-
-  <!-- ================= RIGHT: MATHEMATICAL HARMONIC WAVEFORM ================= -->
-  <!-- (Original Vector Waves representing Algorithmic / Signal Computing) -->
-  <g transform="translate(480, 0)">
-    <!-- Ambient Wave Backlight -->
-    <ellipse cx="220" cy="130" rx="140" ry="60" fill="#1e3a8a" opacity="0.18" filter="url(#softGlow)" />
-
-    <!-- Technical Vertical Coordinate Guides -->
-    <line x1="100" y1="40" x2="100" y2="220" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" stroke-dasharray="3 3" />
-    <line x1="220" y1="40" x2="220" y2="220" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" stroke-dasharray="3 3" />
-    <line x1="340" y1="40" x2="340" y2="220" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" stroke-dasharray="3 3" />
-
-    <!-- Wave Layer 2 (Cyan Secondary) -->
-    <g class="wave-2">
-      <path d="M 30,145 C 90,95 160,185 230,135 C 300,85 360,165 410,130" 
-            fill="none" stroke="url(#waveGrad2)" stroke-width="2" stroke-linecap="round" />
-    </g>
-
-    <!-- Wave Layer 1 (Electric Sapphire / Violet Primary) -->
-    <g class="wave-1">
-      <path d="M 20,130 C 80,180 150,80 220,130 C 290,180 350,90 410,135" 
-            fill="none" stroke="url(#waveGrad1)" stroke-width="2.8" stroke-linecap="round" filter="url(#softGlow)" />
-    </g>
-
-    <!-- Harmonic Interactive Nodes -->
-    <circle class="pulse-node" cx="220" cy="130" r="4" fill="#38bdf8" />
-    <circle cx="150" cy="105" r="2.5" fill="#818cf8" opacity="0.8" />
-    <circle cx="290" cy="155" r="2.5" fill="#c084fc" opacity="0.8" />
-    <circle cx="350" cy="112" r="2" fill="#38bdf8" opacity="0.6" />
-
-    <!-- Coordinate Metrics (Subtle & Formal) -->
-    <text x="390" y="55" class="sf-mono" font-size="9" fill="#334155" text-anchor="end" letter-spacing="1">
-      HARMONIC MATRIX // 60Hz
-    </text>
-  </g>
+  <!-- ONLY THE NAME: Massive, Centered, Animated -->
+  <text x="50%" y="50%" class="sf-heavy" font-size="88" fill="url(#nameShimmer)" letter-spacing="1">
+    ZEDRAYAMI
+  </text>
 </svg>
