@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="banner.svg" alt="Zedrayami Banner" width="100%" />
+  <img src="banner.svg" alt="ZEDRAYAMI" width="100%" />
 </p>
