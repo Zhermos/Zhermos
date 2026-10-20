@@ -24,7 +24,7 @@
           user-select: none;
         }
 
-        /* Ambient Glow behind Text */
+        /* Ambient Glow Behind Text */
         .ambient-glow {
           position: absolute;
           left: 40px;
@@ -47,18 +47,19 @@
           margin-bottom: 14px;
         }
 
-        /* Terminal Line Container */
-        .terminal-container {
+        /* Terminal Prompt Line */
+        .terminal-box {
           position: relative;
           height: 32px;
           display: flex;
           align-items: center;
         }
 
-        .topic-wrapper {
+        .topic-group {
           position: absolute;
           left: 0;
           top: 0;
+          height: 100%;
           display: flex;
           align-items: center;
         }
@@ -72,188 +73,185 @@
           line-height: 1;
         }
 
-        .bin-text {
+        .bin-line, .human-line {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+        }
+
+        /* Typing Binary Text */
+        .type-bin {
+          display: inline-block;
+          overflow: hidden;
+          white-space: nowrap;
           font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
           font-size: 15px;
           font-weight: 600;
           color: #38bdf8;
           letter-spacing: 1px;
-          overflow: hidden;
-          white-space: nowrap;
-          display: inline-block;
-          vertical-align: middle;
+          border-right: 8px solid #38bdf8;
         }
 
-        .human-text {
+        /* Decoded Human Text */
+        .type-human {
+          display: inline-block;
+          white-space: nowrap;
           font-size: 17.5px;
           font-weight: 500;
           color: #f1f5f9;
           letter-spacing: 0.2px;
-          white-space: nowrap;
-          display: inline-block;
-          vertical-align: middle;
+          border-right: 8px solid #38bdf8;
+          padding-right: 2px;
         }
 
-        /* Inline Block Cursor (Never Overlaps) */
-        .cursor {
-          display: inline-block;
-          width: 9px;
-          height: 18px;
-          background-color: #38bdf8;
-          margin-left: 8px;
-          vertical-align: middle;
-          border-radius: 1px;
+        /* Blinking Cursor Border */
+        @keyframes cursorBlink {
+          0%, 100% { border-color: #38bdf8; }
+          50% { border-color: transparent; }
+        }
+
+        /* ================= 4-TOPIC TYPING & ENTER TIMELINE (24s Total, 6s Each) ================= */
+
+        /* TOPIC 1: AIoT Systems (0% - 25%) */
+        .t1-bin {
+          animation: animT1Bin 24s infinite;
+        }
+        .t1-bin .type-bin {
+          animation: animT1Type 24s steps(22, end) infinite, cursorBlink 0.75s step-end infinite;
+        }
+        .t1-human {
+          animation: animT1Human 24s infinite;
+        }
+        .t1-human .type-human {
           animation: cursorBlink 0.75s step-end infinite;
         }
 
-        @keyframes cursorBlink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-
-        /* ================= 4-PHASE TYPING + ENTER ANIMATION (20s Total) ================= */
-
-        /* TOPIC 1: AIoT Systems (0s - 5s / 0% - 25%) */
-        .t1-bin-box {
-          display: inline-flex;
-          align-items: center;
-          animation: animT1BinBox 20s infinite;
-        }
-        .t1-bin-box .bin-text {
-          animation: animT1BinType 20s steps(18, end) infinite;
-        }
-        .t1-human-box {
-          display: inline-flex;
-          align-items: center;
-          animation: animT1HumanBox 20s infinite;
-        }
-
-        @keyframes animT1BinBox {
-          0% { opacity: 1; display: inline-flex; }
+        @keyframes animT1Bin {
+          0% { opacity: 1; visibility: visible; filter: brightness(1); }
           6.5% { filter: brightness(1); }
-          7.2% { filter: brightness(2.5); text-shadow: 0 0 10px #ffffff; } /* Enter pressed flash */
-          7.8% { opacity: 0; display: none; }
-          25%, 100% { opacity: 0; display: none; }
+          7.5% { filter: brightness(2.5) drop-shadow(0 0 8px #ffffff); } /* Enter Pressed */
+          8.2% { opacity: 0; visibility: hidden; }
+          100% { opacity: 0; visibility: hidden; }
         }
-        @keyframes animT1BinType {
+        @keyframes animT1Type {
           0% { width: 0; }
-          5% { width: 235px; }
-          7.8%, 100% { width: 235px; }
+          6.5% { width: 245px; }
+          8.2%, 100% { width: 245px; }
         }
-        @keyframes animT1HumanBox {
-          0%, 7.8% { opacity: 0; transform: translateY(4px); display: none; }
-          8.2% { opacity: 1; transform: translateY(0); display: inline-flex; }
-          20.5% { opacity: 1; transform: translateY(0); }
-          22.5% { opacity: 0; transform: translateY(-4px); display: none; }
-          25%, 100% { opacity: 0; display: none; }
-        }
-
-        /* TOPIC 2: iOS & Swift Architecture (5s - 10s / 25% - 50%) */
-        .t2-bin-box {
-          display: inline-flex;
-          align-items: center;
-          animation: animT2BinBox 20s infinite;
-        }
-        .t2-bin-box .bin-text {
-          animation: animT2BinType 20s steps(18, end) infinite;
-        }
-        .t2-human-box {
-          display: inline-flex;
-          align-items: center;
-          animation: animT2HumanBox 20s infinite;
+        @keyframes animT1Human {
+          0%, 8.1% { opacity: 0; visibility: hidden; transform: translateY(3px); }
+          8.5% { opacity: 1; visibility: visible; transform: translateY(0); }
+          22% { opacity: 1; visibility: visible; transform: translateY(0); }
+          24% { opacity: 0; visibility: hidden; transform: translateY(-3px); }
+          100% { opacity: 0; visibility: hidden; }
         }
 
-        @keyframes animT2BinBox {
-          0%, 24.8% { opacity: 0; display: none; }
-          25% { opacity: 1; display: inline-flex; }
+        /* TOPIC 2: iOS & Swift Architecture (25% - 50%) */
+        .t2-bin {
+          animation: animT2Bin 24s infinite;
+        }
+        .t2-bin .type-bin {
+          animation: animT2Type 24s steps(22, end) infinite, cursorBlink 0.75s step-end infinite;
+        }
+        .t2-human {
+          animation: animT2Human 24s infinite;
+        }
+        .t2-human .type-human {
+          animation: cursorBlink 0.75s step-end infinite;
+        }
+
+        @keyframes animT2Bin {
+          0%, 24.9% { opacity: 0; visibility: hidden; filter: brightness(1); }
+          25% { opacity: 1; visibility: visible; filter: brightness(1); }
           31.5% { filter: brightness(1); }
-          32.2% { filter: brightness(2.5); text-shadow: 0 0 10px #ffffff; }
-          32.8% { opacity: 0; display: none; }
-          50%, 100% { opacity: 0; display: none; }
+          32.5% { filter: brightness(2.5) drop-shadow(0 0 8px #ffffff); } /* Enter Pressed */
+          33.2% { opacity: 0; visibility: hidden; }
+          100% { opacity: 0; visibility: hidden; }
         }
-        @keyframes animT2BinType {
+        @keyframes animT2Type {
           0%, 25% { width: 0; }
-          30% { width: 235px; }
-          32.8%, 100% { width: 235px; }
+          31.5% { width: 245px; }
+          33.2%, 100% { width: 245px; }
         }
-        @keyframes animT2HumanBox {
-          0%, 32.8% { opacity: 0; transform: translateY(4px); display: none; }
-          33.2% { opacity: 1; transform: translateY(0); display: inline-flex; }
-          45.5% { opacity: 1; transform: translateY(0); }
-          47.5% { opacity: 0; transform: translateY(-4px); display: none; }
-          50%, 100% { opacity: 0; display: none; }
-        }
-
-        /* TOPIC 3: Computer Vision & AI (10s - 15s / 50% - 75%) */
-        .t3-bin-box {
-          display: inline-flex;
-          align-items: center;
-          animation: animT3BinBox 20s infinite;
-        }
-        .t3-bin-box .bin-text {
-          animation: animT3BinType 20s steps(18, end) infinite;
-        }
-        .t3-human-box {
-          display: inline-flex;
-          align-items: center;
-          animation: animT3HumanBox 20s infinite;
+        @keyframes animT2Human {
+          0%, 33.1% { opacity: 0; visibility: hidden; transform: translateY(3px); }
+          33.5% { opacity: 1; visibility: visible; transform: translateY(0); }
+          47% { opacity: 1; visibility: visible; transform: translateY(0); }
+          49% { opacity: 0; visibility: hidden; transform: translateY(-3px); }
+          100% { opacity: 0; visibility: hidden; }
         }
 
-        @keyframes animT3BinBox {
-          0%, 49.8% { opacity: 0; display: none; }
-          50% { opacity: 1; display: inline-flex; }
+        /* TOPIC 3: Computer Vision & AI (50% - 75%) */
+        .t3-bin {
+          animation: animT3Bin 24s infinite;
+        }
+        .t3-bin .type-bin {
+          animation: animT3Type 24s steps(22, end) infinite, cursorBlink 0.75s step-end infinite;
+        }
+        .t3-human {
+          animation: animT3Human 24s infinite;
+        }
+        .t3-human .type-human {
+          animation: cursorBlink 0.75s step-end infinite;
+        }
+
+        @keyframes animT3Bin {
+          0%, 49.9% { opacity: 0; visibility: hidden; filter: brightness(1); }
+          50% { opacity: 1; visibility: visible; filter: brightness(1); }
           56.5% { filter: brightness(1); }
-          57.2% { filter: brightness(2.5); text-shadow: 0 0 10px #ffffff; }
-          57.8% { opacity: 0; display: none; }
-          75%, 100% { opacity: 0; display: none; }
+          57.5% { filter: brightness(2.5) drop-shadow(0 0 8px #ffffff); } /* Enter Pressed */
+          58.2% { opacity: 0; visibility: hidden; }
+          100% { opacity: 0; visibility: hidden; }
         }
-        @keyframes animT3BinType {
+        @keyframes animT3Type {
           0%, 50% { width: 0; }
-          55% { width: 235px; }
-          57.8%, 100% { width: 235px; }
+          56.5% { width: 245px; }
+          58.2%, 100% { width: 245px; }
         }
-        @keyframes animT3HumanBox {
-          0%, 57.8% { opacity: 0; transform: translateY(4px); display: none; }
-          58.2% { opacity: 1; transform: translateY(0); display: inline-flex; }
-          70.5% { opacity: 1; transform: translateY(0); }
-          72.5% { opacity: 0; transform: translateY(-4px); display: none; }
-          75%, 100% { opacity: 0; display: none; }
-        }
-
-        /* TOPIC 4: Biomedical Computing (15s - 20s / 75% - 100%) */
-        .t4-bin-box {
-          display: inline-flex;
-          align-items: center;
-          animation: animT4BinBox 20s infinite;
-        }
-        .t4-bin-box .bin-text {
-          animation: animT4BinType 20s steps(18, end) infinite;
-        }
-        .t4-human-box {
-          display: inline-flex;
-          align-items: center;
-          animation: animT4HumanBox 20s infinite;
+        @keyframes animT3Human {
+          0%, 58.1% { opacity: 0; visibility: hidden; transform: translateY(3px); }
+          58.5% { opacity: 1; visibility: visible; transform: translateY(0); }
+          72% { opacity: 1; visibility: visible; transform: translateY(0); }
+          74% { opacity: 0; visibility: hidden; transform: translateY(-3px); }
+          100% { opacity: 0; visibility: hidden; }
         }
 
-        @keyframes animT4BinBox {
-          0%, 74.8% { opacity: 0; display: none; }
-          75% { opacity: 1; display: inline-flex; }
+        /* TOPIC 4: Biomedical Computing (75% - 100%) */
+        .t4-bin {
+          animation: animT4Bin 24s infinite;
+        }
+        .t4-bin .type-bin {
+          animation: animT4Type 24s steps(22, end) infinite, cursorBlink 0.75s step-end infinite;
+        }
+        .t4-human {
+          animation: animT4Human 24s infinite;
+        }
+        .t4-human .type-human {
+          animation: cursorBlink 0.75s step-end infinite;
+        }
+
+        @keyframes animT4Bin {
+          0%, 74.9% { opacity: 0; visibility: hidden; filter: brightness(1); }
+          75% { opacity: 1; visibility: visible; filter: brightness(1); }
           81.5% { filter: brightness(1); }
-          82.2% { filter: brightness(2.5); text-shadow: 0 0 10px #ffffff; }
-          82.8% { opacity: 0; display: none; }
-          100% { opacity: 0; display: none; }
+          82.5% { filter: brightness(2.5) drop-shadow(0 0 8px #ffffff); } /* Enter Pressed */
+          83.2% { opacity: 0; visibility: hidden; }
+          100% { opacity: 0; visibility: hidden; }
         }
-        @keyframes animT4BinType {
+        @keyframes animT4Type {
           0%, 75% { width: 0; }
-          80% { width: 235px; }
-          82.8%, 100% { width: 235px; }
+          81.5% { width: 245px; }
+          83.2%, 100% { width: 245px; }
         }
-        @keyframes animT4HumanBox {
-          0%, 82.8% { opacity: 0; transform: translateY(4px); display: none; }
-          83.2% { opacity: 1; transform: translateY(0); display: inline-flex; }
-          95.5% { opacity: 1; transform: translateY(0); }
-          97.5% { opacity: 0; transform: translateY(-4px); display: none; }
-          100% { opacity: 0; display: none; }
+        @keyframes animT4Human {
+          0%, 83.1% { opacity: 0; visibility: hidden; transform: translateY(3px); }
+          83.5% { opacity: 1; visibility: visible; transform: translateY(0); }
+          97% { opacity: 1; visibility: visible; transform: translateY(0); }
+          99% { opacity: 0; visibility: hidden; transform: translateY(-3px); }
+          100% { opacity: 0; visibility: hidden; }
         }
       ]]></style>
 
@@ -264,61 +262,53 @@
         <h1 class="hero-name">ZEDRAYAMI</h1>
 
         <!-- Typewriter & Enter Terminal Line -->
-        <div class="terminal-container">
+        <div class="terminal-box">
 
           <!-- TOPIC 1: AIoT Systems -->
-          <div class="topic-wrapper">
-            <div class="t1-bin-box">
+          <div class="topic-group">
+            <div class="bin-line t1-bin">
               <span class="prompt">&gt;</span>
-              <span class="bin-text">01000001 01001001 01101111 01010100</span>
-              <span class="cursor"></span>
+              <span class="type-bin">01000001 01001001 01101111 01010100</span>
             </div>
-            <div class="t1-human-box">
+            <div class="human-line t1-human">
               <span class="prompt">&gt;</span>
-              <span class="human-text">AIoT &amp; Embedded Systems</span>
-              <span class="cursor"></span>
+              <span class="type-human">AIoT &amp; Embedded Systems</span>
             </div>
           </div>
 
           <!-- TOPIC 2: iOS & Swift Architecture -->
-          <div class="topic-wrapper">
-            <div class="t2-bin-box">
+          <div class="topic-group">
+            <div class="bin-line t2-bin">
               <span class="prompt">&gt;</span>
-              <span class="bin-text">01101001 01001111 01010011 00100000</span>
-              <span class="cursor"></span>
+              <span class="type-bin">01101001 01001111 01010011 00100000</span>
             </div>
-            <div class="t2-human-box">
+            <div class="human-line t2-human">
               <span class="prompt">&gt;</span>
-              <span class="human-text">iOS &amp; Swift Architecture</span>
-              <span class="cursor"></span>
+              <span class="type-human">iOS &amp; Swift Architecture</span>
             </div>
           </div>
 
           <!-- TOPIC 3: Computer Vision & AI -->
-          <div class="topic-wrapper">
-            <div class="t3-bin-box">
+          <div class="topic-group">
+            <div class="bin-line t3-bin">
               <span class="prompt">&gt;</span>
-              <span class="bin-text">01010110 01001001 01010011 00101100</span>
-              <span class="cursor"></span>
+              <span class="type-bin">01010110 01001001 01010011 00101100</span>
             </div>
-            <div class="t3-human-box">
+            <div class="human-line t3-human">
               <span class="prompt">&gt;</span>
-              <span class="human-text">Computer Vision &amp; Deep Learning</span>
-              <span class="cursor"></span>
+              <span class="human-text type-human">Computer Vision &amp; Deep Learning</span>
             </div>
           </div>
 
           <!-- TOPIC 4: Biomedical Computing -->
-          <div class="topic-wrapper">
-            <div class="t4-bin-box">
+          <div class="topic-group">
+            <div class="bin-line t4-bin">
               <span class="prompt">&gt;</span>
-              <span class="bin-text">01000010 01001001 01001111 01101101</span>
-              <span class="cursor"></span>
+              <span class="type-bin">01000010 01001001 01001111 01101101</span>
             </div>
-            <div class="t4-human-box">
+            <div class="human-line t4-human">
               <span class="prompt">&gt;</span>
-              <span class="human-text">Biomedical Nanotech Computing</span>
-              <span class="cursor"></span>
+              <span class="type-human">Biomedical Nanotech Computing</span>
             </div>
           </div>
 
