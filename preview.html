@@ -3,105 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preview GitHub Banners - Zedrayami (@Zhermos)</title>
+  <title>Preview Apple Keynote Banners - Zedrayami (@Zhermos)</title>
   <style>
     body {
-      background-color: #0d1117;
-      color: #c9d1d9;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
-      padding: 40px 20px;
-      max-width: 1000px;
+      background-color: #000000;
+      color: #f5f5f7;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+      padding: 50px 24px;
+      max-width: 980px;
       margin: 0 auto;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 48px;
     }
     h1 {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 700;
-      color: #f0f6fc;
-      margin-bottom: 8px;
+      letter-spacing: -0.8px;
+      margin-bottom: 10px;
+      background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     p.desc {
-      color: #8b949e;
-      margin-bottom: 30px;
+      color: #71717a;
       font-size: 15px;
+      letter-spacing: -0.1px;
     }
-    .banner-container {
-      margin-bottom: 40px;
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
+    .card-wrap {
+      margin-bottom: 52px;
+      background: #09090b;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
       padding: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
-    .banner-header {
+    .card-meta {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      padding: 0 4px;
     }
-    .banner-title {
-      font-size: 18px;
+    .card-title {
+      font-size: 16px;
       font-weight: 600;
-      color: #58a6ff;
+      color: #e4e4e7;
+      letter-spacing: -0.2px;
     }
-    .banner-tag {
-      font-size: 12px;
+    .card-badge {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
       padding: 4px 10px;
-      border-radius: 20px;
-      background: #21262d;
-      color: #8b949e;
-      border: 1px solid #30363d;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #a1a1aa;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .preview-box {
+    .svg-container {
       width: 100%;
+      border-radius: 16px;
       overflow: hidden;
-      border-radius: 10px;
+      background: #000000;
     }
-    .preview-box img {
+    .svg-container img {
       width: 100%;
       height: auto;
       display: block;
     }
-    .code-snippet {
-      background: #0d1117;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      padding: 12px 16px;
-      margin-top: 14px;
+    .snippet {
+      margin-top: 16px;
+      padding: 12px 18px;
+      background: #030303;
+      border: 1px solid #27272a;
+      border-radius: 10px;
       font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
       font-size: 13px;
-      color: #79c0ff;
+      color: #60a5fa;
       user-select: all;
     }
   </style>
 </head>
 <body>
-  <h1>GitHub Profile Banner Previews</h1>
-  <p class="desc">Designed for <strong>Zedrayami (@Zhermos)</strong> following Cupertino Minimalist Aesthetic with SF Pro Typography.</p>
+  <header>
+    <h1>Apple Keynote / WWDC Minimalist Banners</h1>
+    <p class="desc">ออกแบบใหม่สำหรับ <strong>Zedrayami (@Zhermos)</strong>: ไม่มีป้ายรกตา ไม่มีเส้นประซ้อนทับ ตัวหนังสือจัดกึ่งกลางคลีนระดับพรีเมียม</p>
+  </header>
 
   <!-- Option 1 -->
-  <div class="banner-container">
-    <div class="banner-header">
-      <div class="banner-title">1. banner.svg (Glassmorphism &amp; Typewriter Motion)</div>
-      <div class="banner-tag">Recommended for Web GitHub Profile</div>
+  <div class="card-wrap">
+    <div class="card-meta">
+      <div class="card-title">1. banner.svg — Apple Intelligence Glow &amp; Fluid Shimmer</div>
+      <div class="card-badge">แนะนำสำหรับ GitHub Profile</div>
     </div>
-    <div class="preview-box">
-      <img src="banner.svg" alt="Banner Preview 1">
+    <div class="svg-container">
+      <img src="banner.svg" alt="Apple Keynote Banner">
     </div>
-    <div class="code-snippet">
+    <div class="snippet">
       &lt;p align="center"&gt;&lt;img src="./banner.svg" width="100%" alt="Zedrayami Banner" /&gt;&lt;/p&gt;
     </div>
   </div>
 
   <!-- Option 2 -->
-  <div class="banner-container">
-    <div class="banner-header">
-      <div class="banner-title">2. banner-pure.svg (100% Native Pure Vector SVG)</div>
-      <div class="banner-tag">Universal &amp; 100% Camo Safe</div>
+  <div class="card-wrap">
+    <div class="card-meta">
+      <div class="card-title">2. banner-minimal.svg — Space Black Titanium Shimmer</div>
+      <div class="card-badge">Ultra-Minimal Monotone</div>
     </div>
-    <div class="preview-box">
-      <img src="banner-pure.svg" alt="Banner Preview 2">
+    <div class="svg-container">
+      <img src="banner-minimal.svg" alt="Titanium Minimal Banner">
     </div>
-    <div class="code-snippet">
-      &lt;p align="center"&gt;&lt;img src="./banner-pure.svg" width="100%" alt="Zedrayami Banner" /&gt;&lt;/p&gt;
+    <div class="snippet">
+      &lt;p align="center"&gt;&lt;img src="./banner-minimal.svg" width="100%" alt="Zedrayami Banner" /&gt;&lt;/p&gt;
     </div>
   </div>
 </body>
