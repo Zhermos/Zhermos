@@ -1,194 +1,329 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" width="100%" height="220" fill="none">
-  <defs>
-    <!-- Deep Space Black Card Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090a0f" />
-      <stop offset="100%" stop-color="#020305" />
-    </linearGradient>
+<svg fill="none" viewBox="0 0 920 220" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style><![CDATA[
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
 
-    <!-- Metallic Titanium Shine on Name -->
-    <linearGradient id="nameShine" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="60%" stop-color="#f1f5f9" />
-      <stop offset="100%" stop-color="#94a3b8" />
-    </linearGradient>
+        .card {
+          position: relative;
+          width: 100%;
+          height: 220px;
+          background: linear-gradient(135deg, #090a0f 0%, #020305 100%);
+          border-radius: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 68px;
+          font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+          user-select: none;
+        }
 
-    <!-- Subtle Ambient Glow behind Text -->
-    <radialGradient id="midLeftGlow" cx="25%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.28" />
-      <stop offset="100%" stop-color="#090a0f" stop-opacity="0" />
-    </radialGradient>
+        /* Ambient Glow behind Text */
+        .ambient-glow {
+          position: absolute;
+          left: 40px;
+          top: 30px;
+          width: 380px;
+          height: 160px;
+          background: radial-gradient(circle, rgba(30, 58, 138, 0.35) 0%, rgba(9, 10, 15, 0) 70%);
+          pointer-events: none;
+        }
 
-    <style><![CDATA[
-      .sf-heavy {
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
-        font-weight: 800;
-      }
-      .sf-sub {
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
-        font-weight: 500;
-      }
-      .sf-mono {
-        font-family: "SF Mono", Monaco, "Cascadia Code", "Courier New", monospace;
-      }
+        /* Giant Name in Mid-Left */
+        .hero-name {
+          font-size: 70px;
+          font-weight: 800;
+          letter-spacing: -1.5px;
+          background: linear-gradient(180deg, #ffffff 20%, #cbd5e1 70%, #94a3b8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          line-height: 1.1;
+          margin-bottom: 14px;
+        }
 
-      /* Blinking Cursor Animation */
-      .cursor-blink {
-        animation: cursorBlinkAnim 0.8s step-end infinite;
-      }
-      @keyframes cursorBlinkAnim {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
+        /* Terminal Line Container */
+        .terminal-container {
+          position: relative;
+          height: 32px;
+          display: flex;
+          align-items: center;
+        }
 
-      /* Topic 1: AIoT Systems */
-      .topic-1-bin {
-        animation: animT1Bin 12s infinite;
-      }
-      .topic-1-txt {
-        animation: animT1Txt 12s infinite;
-      }
-      @keyframes animT1Bin {
-        0% { opacity: 1; transform: translateY(0); }
-        1.5% { opacity: 0.7; }
-        3% { opacity: 0.9; }
-        4% { opacity: 0; transform: translateY(-2px); }
-        25%, 100% { opacity: 0; }
-      }
-      @keyframes animT1Txt {
-        0%, 3.5% { opacity: 0; transform: translateY(3px); }
-        4.5% { opacity: 1; transform: translateY(0); }
-        21% { opacity: 1; transform: translateY(0); }
-        23.5%, 100% { opacity: 0; transform: translateY(-3px); }
-      }
+        .topic-wrapper {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+        }
 
-      /* Topic 2: iOS and Swift Architecture */
-      .topic-2-bin {
-        animation: animT2Bin 12s infinite;
-      }
-      .topic-2-txt {
-        animation: animT2Txt 12s infinite;
-      }
-      @keyframes animT2Bin {
-        0%, 24% { opacity: 0; }
-        25% { opacity: 1; transform: translateY(0); }
-        26.5% { opacity: 0.6; }
-        28% { opacity: 0.9; }
-        29% { opacity: 0; transform: translateY(-2px); }
-        50%, 100% { opacity: 0; }
-      }
-      @keyframes animT2Txt {
-        0%, 28.5% { opacity: 0; transform: translateY(3px); }
-        29.5% { opacity: 1; transform: translateY(0); }
-        46% { opacity: 1; transform: translateY(0); }
-        48.5%, 100% { opacity: 0; transform: translateY(-3px); }
-      }
+        .prompt {
+          font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+          color: #38bdf8;
+          font-size: 18px;
+          font-weight: 700;
+          margin-right: 12px;
+          line-height: 1;
+        }
 
-      /* Topic 3: Computer Vision and AI */
-      .topic-3-bin {
-        animation: animT3Bin 12s infinite;
-      }
-      .topic-3-txt {
-        animation: animT3Txt 12s infinite;
-      }
-      @keyframes animT3Bin {
-        0%, 49% { opacity: 0; }
-        50% { opacity: 1; transform: translateY(0); }
-        51.5% { opacity: 0.7; }
-        53% { opacity: 0.9; }
-        54% { opacity: 0; transform: translateY(-2px); }
-        75%, 100% { opacity: 0; }
-      }
-      @keyframes animT3Txt {
-        0%, 53.5% { opacity: 0; transform: translateY(3px); }
-        54.5% { opacity: 1; transform: translateY(0); }
-        71% { opacity: 1; transform: translateY(0); }
-        73.5%, 100% { opacity: 0; transform: translateY(-3px); }
-      }
+        .bin-text {
+          font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+          font-size: 15px;
+          font-weight: 600;
+          color: #38bdf8;
+          letter-spacing: 1px;
+          overflow: hidden;
+          white-space: nowrap;
+          display: inline-block;
+          vertical-align: middle;
+        }
 
-      /* Topic 4: Biomedical Computing */
-      .topic-4-bin {
-        animation: animT4Bin 12s infinite;
-      }
-      .topic-4-txt {
-        animation: animT4Txt 12s infinite;
-      }
-      @keyframes animT4Bin {
-        0%, 74% { opacity: 0; }
-        75% { opacity: 1; transform: translateY(0); }
-        76.5% { opacity: 0.6; }
-        78% { opacity: 0.9; }
-        79% { opacity: 0; transform: translateY(-2px); }
-        100% { opacity: 0; }
-      }
-      @keyframes animT4Txt {
-        0%, 78.5% { opacity: 0; transform: translateY(3px); }
-        79.5% { opacity: 1; transform: translateY(0); }
-        96% { opacity: 1; transform: translateY(0); }
-        98.5%, 100% { opacity: 0; transform: translateY(-3px); }
-      }
-    ]]></style>
-  </defs>
+        .human-text {
+          font-size: 17.5px;
+          font-weight: 500;
+          color: #f1f5f9;
+          letter-spacing: 0.2px;
+          white-space: nowrap;
+          display: inline-block;
+          vertical-align: middle;
+        }
 
-  <!-- Card Frame -->
-  <rect x="1" y="1" width="918" height="218" rx="20" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2" />
+        /* Inline Block Cursor (Never Overlaps) */
+        .cursor {
+          display: inline-block;
+          width: 9px;
+          height: 18px;
+          background-color: #38bdf8;
+          margin-left: 8px;
+          vertical-align: middle;
+          border-radius: 1px;
+          animation: cursorBlink 0.75s step-end infinite;
+        }
 
-  <!-- Ambient Light on the Mid-Left -->
-  <rect x="1" y="1" width="918" height="218" rx="20" fill="url(#midLeftGlow)" />
+        @keyframes cursorBlink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
 
-  <!-- ================= MID-LEFT HERO GROUP ================= -->
-  <g transform="translate(68, 0)">
-    
-    <!-- 1. Giant Name in Mid-Left Position -->
-    <text x="0" y="108" class="sf-heavy" font-size="70" fill="url(#nameShine)" letter-spacing="-1.2">
-      ZEDRAYAMI
-    </text>
+        /* ================= 4-PHASE TYPING + ENTER ANIMATION (20s Total) ================= */
 
-    <!-- 2. Dynamic Binary-to-Text Transition Subtitle Line -->
-    <g transform="translate(2, 154)">
-      <!-- Prefix Prompt Symbol -->
-      <text x="0" y="0" class="sf-mono" font-size="16" font-weight="700" fill="#38bdf8">&gt;</text>
+        /* TOPIC 1: AIoT Systems (0s - 5s / 0% - 25%) */
+        .t1-bin-box {
+          display: inline-flex;
+          align-items: center;
+          animation: animT1BinBox 20s infinite;
+        }
+        .t1-bin-box .bin-text {
+          animation: animT1BinType 20s steps(18, end) infinite;
+        }
+        .t1-human-box {
+          display: inline-flex;
+          align-items: center;
+          animation: animT1HumanBox 20s infinite;
+        }
 
-      <!-- Topic 1: AIoT Systems -->
-      <g transform="translate(20, 0)">
-        <text class="sf-mono topic-1-bin" font-size="15" font-weight="600" fill="#38bdf8" letter-spacing="1">
-          01000001 01001001 01101111 01010100<tspan class="cursor-blink" fill="#38bdf8"> █</tspan>
-        </text>
-        <text class="sf-sub topic-1-txt" font-size="17" fill="#e2e8f0" letter-spacing="0.3">
-          AIoT &amp; Embedded Systems<tspan class="cursor-blink" fill="#38bdf8"> █</tspan>
-        </text>
-      </g>
+        @keyframes animT1BinBox {
+          0% { opacity: 1; display: inline-flex; }
+          6.5% { filter: brightness(1); }
+          7.2% { filter: brightness(2.5); text-shadow: 0 0 10px #ffffff; } /* Enter pressed flash */
+          7.8% { opacity: 0; display: none; }
+          25%, 100% { opacity: 0; display: none; }
+        }
+        @keyframes animT1BinType {
+          0% { width: 0; }
+          5% { width: 235px; }
+          7.8%, 100% { width: 235px; }
+        }
+        @keyframes animT1HumanBox {
+          0%, 7.8% { opacity: 0; transform: translateY(4px); display: none; }
+          8.2% { opacity: 1; transform: translateY(0); display: inline-flex; }
+          20.5% { opacity: 1; transform: translateY(0); }
+          22.5% { opacity: 0; transform: translateY(-4px); display: none; }
+          25%, 100% { opacity: 0; display: none; }
+        }
 
-      <!-- Topic 2: iOS and Swift Architecture -->
-      <g transform="translate(20, 0)">
-        <text class="sf-mono topic-2-bin" font-size="15" font-weight="600" fill="#38bdf8" letter-spacing="1">
-          01101001 01001111 01010011 00100000<tspan class="cursor-blink" fill="#38bdf8"> █</tspan>
-        </text>
-        <text class="sf-sub topic-2-txt" font-size="17" fill="#e2e8f0" letter-spacing="0.3">
-          iOS &amp; Swift Architecture<tspan class="cursor-blink" fill="#38bdf8"> █</tspan>
-        </text>
-      </g>
+        /* TOPIC 2: iOS & Swift Architecture (5s - 10s / 25% - 50%) */
+        .t2-bin-box {
+          display: inline-flex;
+          align-items: center;
+          animation: animT2BinBox 20s infinite;
+        }
+        .t2-bin-box .bin-text {
+          animation: animT2BinType 20s steps(18, end) infinite;
+        }
+        .t2-human-box {
+          display: inline-flex;
+          align-items: center;
+          animation: animT2HumanBox 20s infinite;
+        }
 
-      <!-- Topic 3: Computer Vision and AI -->
-      <g transform="translate(20, 0)">
-        <text class="sf-mono topic-3-bin" font-size="15" font-weight="600" fill="#38bdf8" letter-spacing="1">
-          01010110 01001001 01010011 00101100<tspan class="cursor-blink" fill="#38bdf8"> █</tspan>
-        </text>
-        <text class="sf-sub topic-3-txt" font-size="17" fill="#e2e8f0" letter-spacing="0.3">
-          Computer Vision &amp; Deep Learning<tspan class="cursor-blink" fill="#38bdf8"> █</tspan>
-        </text>
-      </g>
+        @keyframes animT2BinBox {
+          0%, 24.8% { opacity: 0; display: none; }
+          25% { opacity: 1; display: inline-flex; }
+          31.5% { filter: brightness(1); }
+          32.2% { filter: brightness(2.5); text-shadow: 0 0 10px #ffffff; }
+          32.8% { opacity: 0; display: none; }
+          50%, 100% { opacity: 0; display: none; }
+        }
+        @keyframes animT2BinType {
+          0%, 25% { width: 0; }
+          30% { width: 235px; }
+          32.8%, 100% { width: 235px; }
+        }
+        @keyframes animT2HumanBox {
+          0%, 32.8% { opacity: 0; transform: translateY(4px); display: none; }
+          33.2% { opacity: 1; transform: translateY(0); display: inline-flex; }
+          45.5% { opacity: 1; transform: translateY(0); }
+          47.5% { opacity: 0; transform: translateY(-4px); display: none; }
+          50%, 100% { opacity: 0; display: none; }
+        }
 
-      <!-- Topic 4: Biomedical Computing -->
-      <g transform="translate(20, 0)">
-        <text class="sf-mono topic-4-bin" font-size="15" font-weight="600" fill="#38bdf8" letter-spacing="1">
-          01000010 01001001 01001111 01101101<tspan class="cursor-blink" fill="#38bdf8"> █</tspan>
-        </text>
-        <text class="sf-sub topic-4-txt" font-size="17" fill="#e2e8f0" letter-spacing="0.3">
-          Biomedical Nanotech Computing<tspan class="cursor-blink" fill="#38bdf8"> █</tspan>
-        </text>
-      </g>
-    </g>
+        /* TOPIC 3: Computer Vision & AI (10s - 15s / 50% - 75%) */
+        .t3-bin-box {
+          display: inline-flex;
+          align-items: center;
+          animation: animT3BinBox 20s infinite;
+        }
+        .t3-bin-box .bin-text {
+          animation: animT3BinType 20s steps(18, end) infinite;
+        }
+        .t3-human-box {
+          display: inline-flex;
+          align-items: center;
+          animation: animT3HumanBox 20s infinite;
+        }
 
-  </g>
+        @keyframes animT3BinBox {
+          0%, 49.8% { opacity: 0; display: none; }
+          50% { opacity: 1; display: inline-flex; }
+          56.5% { filter: brightness(1); }
+          57.2% { filter: brightness(2.5); text-shadow: 0 0 10px #ffffff; }
+          57.8% { opacity: 0; display: none; }
+          75%, 100% { opacity: 0; display: none; }
+        }
+        @keyframes animT3BinType {
+          0%, 50% { width: 0; }
+          55% { width: 235px; }
+          57.8%, 100% { width: 235px; }
+        }
+        @keyframes animT3HumanBox {
+          0%, 57.8% { opacity: 0; transform: translateY(4px); display: none; }
+          58.2% { opacity: 1; transform: translateY(0); display: inline-flex; }
+          70.5% { opacity: 1; transform: translateY(0); }
+          72.5% { opacity: 0; transform: translateY(-4px); display: none; }
+          75%, 100% { opacity: 0; display: none; }
+        }
+
+        /* TOPIC 4: Biomedical Computing (15s - 20s / 75% - 100%) */
+        .t4-bin-box {
+          display: inline-flex;
+          align-items: center;
+          animation: animT4BinBox 20s infinite;
+        }
+        .t4-bin-box .bin-text {
+          animation: animT4BinType 20s steps(18, end) infinite;
+        }
+        .t4-human-box {
+          display: inline-flex;
+          align-items: center;
+          animation: animT4HumanBox 20s infinite;
+        }
+
+        @keyframes animT4BinBox {
+          0%, 74.8% { opacity: 0; display: none; }
+          75% { opacity: 1; display: inline-flex; }
+          81.5% { filter: brightness(1); }
+          82.2% { filter: brightness(2.5); text-shadow: 0 0 10px #ffffff; }
+          82.8% { opacity: 0; display: none; }
+          100% { opacity: 0; display: none; }
+        }
+        @keyframes animT4BinType {
+          0%, 75% { width: 0; }
+          80% { width: 235px; }
+          82.8%, 100% { width: 235px; }
+        }
+        @keyframes animT4HumanBox {
+          0%, 82.8% { opacity: 0; transform: translateY(4px); display: none; }
+          83.2% { opacity: 1; transform: translateY(0); display: inline-flex; }
+          95.5% { opacity: 1; transform: translateY(0); }
+          97.5% { opacity: 0; transform: translateY(-4px); display: none; }
+          100% { opacity: 0; display: none; }
+        }
+      ]]></style>
+
+      <div class="card">
+        <div class="ambient-glow"></div>
+
+        <!-- Giant Name in Mid-Left -->
+        <h1 class="hero-name">ZEDRAYAMI</h1>
+
+        <!-- Typewriter & Enter Terminal Line -->
+        <div class="terminal-container">
+
+          <!-- TOPIC 1: AIoT Systems -->
+          <div class="topic-wrapper">
+            <div class="t1-bin-box">
+              <span class="prompt">&gt;</span>
+              <span class="bin-text">01000001 01001001 01101111 01010100</span>
+              <span class="cursor"></span>
+            </div>
+            <div class="t1-human-box">
+              <span class="prompt">&gt;</span>
+              <span class="human-text">AIoT &amp; Embedded Systems</span>
+              <span class="cursor"></span>
+            </div>
+          </div>
+
+          <!-- TOPIC 2: iOS & Swift Architecture -->
+          <div class="topic-wrapper">
+            <div class="t2-bin-box">
+              <span class="prompt">&gt;</span>
+              <span class="bin-text">01101001 01001111 01010011 00100000</span>
+              <span class="cursor"></span>
+            </div>
+            <div class="t2-human-box">
+              <span class="prompt">&gt;</span>
+              <span class="human-text">iOS &amp; Swift Architecture</span>
+              <span class="cursor"></span>
+            </div>
+          </div>
+
+          <!-- TOPIC 3: Computer Vision & AI -->
+          <div class="topic-wrapper">
+            <div class="t3-bin-box">
+              <span class="prompt">&gt;</span>
+              <span class="bin-text">01010110 01001001 01010011 00101100</span>
+              <span class="cursor"></span>
+            </div>
+            <div class="t3-human-box">
+              <span class="prompt">&gt;</span>
+              <span class="human-text">Computer Vision &amp; Deep Learning</span>
+              <span class="cursor"></span>
+            </div>
+          </div>
+
+          <!-- TOPIC 4: Biomedical Computing -->
+          <div class="topic-wrapper">
+            <div class="t4-bin-box">
+              <span class="prompt">&gt;</span>
+              <span class="bin-text">01000010 01001001 01001111 01101101</span>
+              <span class="cursor"></span>
+            </div>
+            <div class="t4-human-box">
+              <span class="prompt">&gt;</span>
+              <span class="human-text">Biomedical Nanotech Computing</span>
+              <span class="cursor"></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </foreignObject>
 </svg>
