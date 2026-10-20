@@ -19,7 +19,7 @@
       <stop offset="100%" stop-color="#090a0f" stop-opacity="0" />
     </radialGradient>
 
-    <style>
+    <style><![CDATA[
       .sf-heavy {
         font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
         font-weight: 800;
@@ -41,9 +41,7 @@
         50% { opacity: 0; }
       }
 
-      /* 4-Phase Binary Transition Loop (Total 12s, 3s per topic) */
-
-      /* Topic 1: AIoT Systems (0% - 25%) */
+      /* Topic 1: AIoT Systems */
       .topic-1-bin {
         animation: animT1Bin 12s infinite;
       }
@@ -64,7 +62,7 @@
         23.5%, 100% { opacity: 0; transform: translateY(-3px); }
       }
 
-      /* Topic 2: iOS & Swift Architecture (25% - 50%) */
+      /* Topic 2: iOS and Swift Architecture */
       .topic-2-bin {
         animation: animT2Bin 12s infinite;
       }
@@ -86,7 +84,7 @@
         48.5%, 100% { opacity: 0; transform: translateY(-3px); }
       }
 
-      /* Topic 3: Computer Vision & AI (50% - 75%) */
+      /* Topic 3: Computer Vision and AI */
       .topic-3-bin {
         animation: animT3Bin 12s infinite;
       }
@@ -108,7 +106,7 @@
         73.5%, 100% { opacity: 0; transform: translateY(-3px); }
       }
 
-      /* Topic 4: Biomedical Computing (75% - 100%) */
+      /* Topic 4: Biomedical Computing */
       .topic-4-bin {
         animation: animT4Bin 12s infinite;
       }
@@ -129,7 +127,7 @@
         96% { opacity: 1; transform: translateY(0); }
         98.5%, 100% { opacity: 0; transform: translateY(-3px); }
       }
-    </style>
+    ]]></style>
   </defs>
 
   <!-- Card Frame -->
@@ -161,7 +159,7 @@
         </text>
       </g>
 
-      <!-- Topic 2: iOS & Swift Architecture -->
+      <!-- Topic 2: iOS and Swift Architecture -->
       <g transform="translate(20, 0)">
         <text class="sf-mono topic-2-bin" font-size="15" font-weight="600" fill="#38bdf8" letter-spacing="1">
           01101001 01001111 01010011 00100000
@@ -171,7 +169,7 @@
         </text>
       </g>
 
-      <!-- Topic 3: Computer Vision & AI -->
+      <!-- Topic 3: Computer Vision and AI -->
       <g transform="translate(20, 0)">
         <text class="sf-mono topic-3-bin" font-size="15" font-weight="600" fill="#38bdf8" letter-spacing="1">
           01010110 01001001 01010011 00101100
