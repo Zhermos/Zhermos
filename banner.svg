@@ -1,109 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="280" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240" width="100%" height="240" fill="none">
   <defs>
-    <!-- Background Base Gradient -->
+    <!-- Deep Obsidian Void Background -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#050508" />
+      <stop offset="0%" stop-color="#08080c" />
       <stop offset="100%" stop-color="#000000" />
     </linearGradient>
 
-    <!-- Apple Intelligence Dynamic Shimmer -->
-    <linearGradient id="appleShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#cbd5e1" />
-      <stop offset="20%" stop-color="#ffffff" />
-      <stop offset="40%" stop-color="#60a5fa" />
-      <stop offset="60%" stop-color="#c084fc" />
-      <stop offset="80%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#cbd5e1" />
-      <animate attributeName="x1" from="-100%" to="100%" dur="7s" repeatCount="indefinite" />
-      <animate attributeName="x2" from="0%" to="200%" dur="7s" repeatCount="indefinite" />
-    </linearGradient>
-
-    <!-- Ultra Soft Ambient Blur -->
-    <filter id="ambientBlur" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="65" />
-    </filter>
-
-    <!-- Refined Glass Border -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.16)" />
-      <stop offset="50%" stop-color="rgba(255, 255, 255, 0.03)" />
-      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.10)" />
-    </linearGradient>
-
-    <!-- Bottom Accent Line Shimmer -->
-    <linearGradient id="lineShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="rgba(96, 165, 250, 0)" />
-      <stop offset="30%" stop-color="rgba(96, 165, 250, 0.7)" />
-      <stop offset="50%" stop-color="rgba(192, 132, 252, 0.9)" />
-      <stop offset="70%" stop-color="rgba(96, 165, 250, 0.7)" />
-      <stop offset="100%" stop-color="rgba(96, 165, 250, 0)" />
+    <!-- Apple Intelligence Liquid Shimmer -->
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="25%" stop-color="#ffffff" />
+      <stop offset="45%" stop-color="#60a5fa" />
+      <stop offset="55%" stop-color="#c084fc" />
+      <stop offset="70%" stop-color="#f472b6" />
+      <stop offset="85%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#94a3b8" />
       <animate attributeName="x1" from="-100%" to="100%" dur="6s" repeatCount="indefinite" />
       <animate attributeName="x2" from="0%" to="200%" dur="6s" repeatCount="indefinite" />
     </linearGradient>
 
+    <!-- Ultra Soft Ambient Aura -->
+    <filter id="softAura" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="55" />
+    </filter>
+
     <style>
-      .sf-text {
-        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      .sf-heavy {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+        font-weight: 800;
+        text-anchor: middle;
+      }
+      .sf-sub {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+        font-weight: 500;
         text-anchor: middle;
       }
 
-      /* Slow, Elegant Breathing for Ambient Light */
-      .ambient-orb {
-        animation: orbBreathe 10s ease-in-out infinite alternate;
+      /* Slow Breathing Ambient Aura */
+      .ambient-glow {
+        animation: glowBreathe 8s ease-in-out infinite alternate;
         transform-origin: center;
       }
-      @keyframes orbBreathe {
-        0% { opacity: 0.22; transform: scale(0.92); }
-        50% { opacity: 0.38; transform: scale(1.08); }
-        100% { opacity: 0.25; transform: scale(0.95); }
+      @keyframes glowBreathe {
+        0% { opacity: 0.25; transform: scale(0.9); }
+        50% { opacity: 0.55; transform: scale(1.1); }
+        100% { opacity: 0.3; transform: scale(0.95); }
       }
 
-      /* Subtle Subtitle Opacity Transition */
-      .sub-line {
-        animation: subFade 8s ease-in-out infinite;
+      /* Subtle Hover/Float for Giant Name */
+      .hero-title {
+        animation: heroFloat 6s ease-in-out infinite alternate;
       }
-      @keyframes subFade {
-        0%, 100% { opacity: 0.78; }
-        50% { opacity: 0.98; }
+      @keyframes heroFloat {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-3px); }
       }
     </style>
   </defs>
 
-  <!-- Canvas Frame -->
-  <rect x="1" y="1" width="918" height="278" rx="22" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.2" />
+  <!-- Border Card -->
+  <rect x="1" y="1" width="918" height="238" rx="24" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.2" />
 
-  <!-- Ambient Light Fields (Keynote Style: Deep Indigo & Violet) -->
-  <g filter="url(#ambientBlur)" class="ambient-orb">
-    <ellipse cx="380" cy="130" rx="200" ry="80" fill="#2563eb" />
-    <ellipse cx="540" cy="140" rx="180" ry="75" fill="#7c3aed" />
+  <!-- Soft Ambient Glow Behind Name -->
+  <g filter="url(#softAura)" class="ambient-glow">
+    <ellipse cx="400" cy="120" rx="220" ry="60" fill="#2563eb" />
+    <ellipse cx="530" cy="120" rx="200" ry="60" fill="#7c3aed" />
   </g>
 
-  <!-- Content Group (Perfect Centered Keynote Layout) -->
-  <g>
-    <!-- Top Metadata Track -->
-    <text x="460" y="78" class="sf-text" font-size="12" font-weight="500" fill="#71717a" letter-spacing="3.8">
-      ZEDRAYAMI  ·  GITHUB.COM/ZHERMOS
-    </text>
-
-    <!-- Main Keynote Title with Apple Intelligence Fluid Shimmer -->
-    <text x="460" y="142" class="sf-text" font-size="35" font-weight="700" fill="url(#appleShimmer)" letter-spacing="-0.8">
-      Architecting Intelligent &amp; Swift Systems
-    </text>
-
-    <!-- Refined Subtitle -->
-    <g class="sub-line">
-      <text x="460" y="184" class="sf-text" font-size="15" font-weight="400" fill="#a1a1aa" letter-spacing="0.4">
-        Swift / SwiftUI Architecture  ·  AI &amp; Bio-Vision  ·  Algorithmic Engineering
-      </text>
-    </g>
-
-    <!-- Sleek Keynote Divider Line -->
-    <line x1="280" y1="222" x2="640" y2="222" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
-    <line x1="280" y1="222" x2="640" y2="222" stroke="url(#lineShimmer)" stroke-width="1.5" />
-
-    <!-- Minimal Bottom Footer Note -->
-    <text x="460" y="248" class="sf-text" font-size="11" font-weight="400" fill="#52525b" letter-spacing="2">
-      DESIGNED FOR PERFORMANCE &amp; PRECISION
+  <!-- Giant Hero Name Centerpiece -->
+  <g class="hero-title">
+    <text x="460" y="132" class="sf-heavy" font-size="78" fill="url(#shimmer)" letter-spacing="-2">
+      Zedrayami
     </text>
   </g>
+
+  <!-- Minimal Handle Tag (Subtle & Crisp) -->
+  <text x="460" y="174" class="sf-sub" font-size="13" fill="#64748b" letter-spacing="4">
+    @ZHERMOS
+  </text>
 </svg>
