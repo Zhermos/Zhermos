@@ -96,7 +96,7 @@
           padding-right: 2px;
         }
 
-        /* Decoded Human Text */
+        /* Decoded Human Text (Solid, No Fade) */
         .type-human {
           display: inline-block;
           white-space: nowrap;
@@ -114,10 +114,10 @@
           50% { border-color: transparent; }
         }
 
-        /* ================= 24s TIMELINE (8s Each Topic) ================= */
-        /* Sequence: 1. Type Binary -> 2. Enter -> 3. Word appears instantly -> 4. Word fades */
+        /* ================= ZERO-FADE TIMELINE (24s Total, 8s Each) ================= */
+        /* Sequence: Type Binary -> Enter -> Word Stays 100% Solid -> Direct Cut to Next */
 
-        /* TOPIC 1: AIoT Systems (0s - 8s / 0% - 33.3%) */
+        /* TOPIC 1: AIoT Systems (0s - 8s / 0% - 33.33%) */
         .t1-bin {
           animation: animT1Bin 24s infinite;
         }
@@ -135,23 +135,23 @@
           0% { opacity: 1; visibility: visible; filter: brightness(1); }
           11.5% { filter: brightness(1); }
           12.0% { filter: brightness(2.8) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
-          12.5% { opacity: 0; visibility: hidden; } /* Instantly Swaps Out */
+          12.01% { opacity: 0; visibility: hidden; } /* Immediate Cut */
           100% { opacity: 0; visibility: hidden; }
         }
         @keyframes animT1Type {
           0% { width: 0; }
-          10.4% { width: 335px; } /* Types all binary characters in 2.5s */
-          12.5%, 100% { width: 335px; }
+          10.4% { width: 335px; } /* Types all characters */
+          12.01%, 100% { width: 335px; }
         }
         @keyframes animT1Human {
-          0%, 12.49% { opacity: 0; visibility: hidden; }
-          12.5% { opacity: 1; visibility: visible; } /* Instantly Becomes Word on Enter! */
-          29.2% { opacity: 1; visibility: visible; } /* Stays for 4 full seconds */
-          32.5% { opacity: 0; visibility: hidden; } /* Finished, THEN Fades! */
+          0%, 12.0% { opacity: 0; visibility: hidden; }
+          12.01% { opacity: 1; visibility: visible; } /* Instant Word on Enter */
+          33.29% { opacity: 1; visibility: visible; } /* 100% Solid, NO FADE */
+          33.3% { opacity: 0; visibility: hidden; } /* Direct Cut to Next */
           100% { opacity: 0; visibility: hidden; }
         }
 
-        /* TOPIC 2: iOS & Swift Architecture (8s - 16s / 33.3% - 66.6%) */
+        /* TOPIC 2: iOS & Swift Architecture (8s - 16s / 33.33% - 66.66%) */
         .t2-bin {
           animation: animT2Bin 24s infinite;
         }
@@ -170,23 +170,23 @@
           33.3% { opacity: 1; visibility: visible; filter: brightness(1); }
           44.8% { filter: brightness(1); }
           45.3% { filter: brightness(2.8) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
-          45.8% { opacity: 0; visibility: hidden; } /* Instantly Swaps Out */
+          45.31% { opacity: 0; visibility: hidden; } /* Immediate Cut */
           100% { opacity: 0; visibility: hidden; }
         }
         @keyframes animT2Type {
           0%, 33.3% { width: 0; }
-          43.7% { width: 335px; } /* Types all binary characters */
-          45.8%, 100% { width: 335px; }
+          43.7% { width: 335px; } /* Types all characters */
+          45.31%, 100% { width: 335px; }
         }
         @keyframes animT2Human {
-          0%, 45.79% { opacity: 0; visibility: hidden; }
-          45.8% { opacity: 1; visibility: visible; } /* Instantly Becomes Word on Enter! */
-          62.5% { opacity: 1; visibility: visible; } /* Stays for 4 full seconds */
-          65.8% { opacity: 0; visibility: hidden; } /* Finished, THEN Fades! */
+          0%, 45.3% { opacity: 0; visibility: hidden; }
+          45.31% { opacity: 1; visibility: visible; } /* Instant Word on Enter */
+          66.62% { opacity: 1; visibility: visible; } /* 100% Solid, NO FADE */
+          66.66% { opacity: 0; visibility: hidden; } /* Direct Cut to Next */
           100% { opacity: 0; visibility: hidden; }
         }
 
-        /* TOPIC 3: Computer Vision & AI (16s - 24s / 66.6% - 100%) */
+        /* TOPIC 3: Computer Vision & AI (16s - 24s / 66.66% - 100%) */
         .t3-bin {
           animation: animT3Bin 24s infinite;
         }
@@ -201,24 +201,23 @@
         }
 
         @keyframes animT3Bin {
-          0%, 66.59% { opacity: 0; visibility: hidden; filter: brightness(1); }
-          66.6% { opacity: 1; visibility: visible; filter: brightness(1); }
+          0%, 66.62% { opacity: 0; visibility: hidden; filter: brightness(1); }
+          66.66% { opacity: 1; visibility: visible; filter: brightness(1); }
           78.1% { filter: brightness(1); }
           78.6% { filter: brightness(2.8) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
-          79.1% { opacity: 0; visibility: hidden; } /* Instantly Swaps Out */
+          78.61% { opacity: 0; visibility: hidden; } /* Immediate Cut */
           100% { opacity: 0; visibility: hidden; }
         }
         @keyframes animT3Type {
-          0%, 66.6% { width: 0; }
-          77.0% { width: 335px; } /* Types all binary characters */
-          79.1%, 100% { width: 335px; }
+          0%, 66.66% { width: 0; }
+          77.0% { width: 335px; } /* Types all characters */
+          78.61%, 100% { width: 335px; }
         }
         @keyframes animT3Human {
-          0%, 79.09% { opacity: 0; visibility: hidden; }
-          79.1% { opacity: 1; visibility: visible; } /* Instantly Becomes Word on Enter! */
-          95.8% { opacity: 1; visibility: visible; } /* Stays for 4 full seconds */
-          99.1% { opacity: 0; visibility: hidden; } /* Finished, THEN Fades! */
-          100% { opacity: 0; visibility: hidden; }
+          0%, 78.6% { opacity: 0; visibility: hidden; }
+          78.61% { opacity: 1; visibility: visible; } /* Instant Word on Enter */
+          99.96% { opacity: 1; visibility: visible; } /* 100% Solid, NO FADE */
+          100% { opacity: 0; visibility: hidden; } /* Direct Cut to Next */
         }
       ]]></style>
 
@@ -228,7 +227,7 @@
         <!-- Giant Name in Mid-Left -->
         <h1 class="hero-name">ZEDRAYAMI</h1>
 
-        <!-- Typewriter & Instant Enter Swap Terminal Line -->
+        <!-- Typewriter & Instant Enter Swap Terminal Line (Zero Fade) -->
         <div class="terminal-box">
 
           <!-- TOPIC 1: AIoT Systems -->
