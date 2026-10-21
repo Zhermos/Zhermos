@@ -114,17 +114,18 @@
           50% { border-color: transparent; }
         }
 
-        /* ================= 27-SECOND FULL TYPING TIMELINE (9s Each Topic) ================= */
+        /* ================= 24s TIMELINE (8s Each Topic) ================= */
+        /* Sequence: 1. Type Binary -> 2. Enter -> 3. Word appears instantly -> 4. Word fades */
 
-        /* TOPIC 1: AIoT Systems (0s - 9s / 0% - 33.3%) */
+        /* TOPIC 1: AIoT Systems (0s - 8s / 0% - 33.3%) */
         .t1-bin {
-          animation: animT1Bin 27s infinite;
+          animation: animT1Bin 24s infinite;
         }
         .t1-bin .type-bin {
-          animation: animT1Type 27s steps(35, end) infinite, cursorBlink 0.75s step-end infinite;
+          animation: animT1Type 24s steps(35, end) infinite, cursorBlink 0.75s step-end infinite;
         }
         .t1-human {
-          animation: animT1Human 27s infinite;
+          animation: animT1Human 24s infinite;
         }
         .t1-human .type-human {
           animation: cursorBlink 0.75s step-end infinite;
@@ -132,91 +133,91 @@
 
         @keyframes animT1Bin {
           0% { opacity: 1; visibility: visible; filter: brightness(1); }
-          14.0% { filter: brightness(1); }
-          15.0% { filter: brightness(2.6) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
-          16.0% { opacity: 0; visibility: hidden; }
+          11.5% { filter: brightness(1); }
+          12.0% { filter: brightness(2.8) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
+          12.5% { opacity: 0; visibility: hidden; } /* Instantly Swaps Out */
           100% { opacity: 0; visibility: hidden; }
         }
         @keyframes animT1Type {
-          0%, 1.5% { width: 0; }
-          11.5% { width: 335px; } /* Types ALL 35 chars across ~2.7s */
-          16.0%, 100% { width: 335px; } /* Pauses on FULL text before Enter */
+          0% { width: 0; }
+          10.4% { width: 335px; } /* Types all binary characters in 2.5s */
+          12.5%, 100% { width: 335px; }
         }
         @keyframes animT1Human {
-          0%, 16.0% { opacity: 0; visibility: hidden; transform: translateY(4px); }
-          16.8% { opacity: 1; visibility: visible; transform: translateY(0); }
-          30.0% { opacity: 1; visibility: visible; transform: translateY(0); } /* Stays 3.6s */
-          32.8% { opacity: 0; visibility: hidden; transform: translateY(-4px); }
+          0%, 12.49% { opacity: 0; visibility: hidden; }
+          12.5% { opacity: 1; visibility: visible; } /* Instantly Becomes Word on Enter! */
+          29.2% { opacity: 1; visibility: visible; } /* Stays for 4 full seconds */
+          32.5% { opacity: 0; visibility: hidden; } /* Finished, THEN Fades! */
           100% { opacity: 0; visibility: hidden; }
         }
 
-        /* TOPIC 2: iOS & Swift Architecture (9s - 18s / 33.3% - 66.6%) */
+        /* TOPIC 2: iOS & Swift Architecture (8s - 16s / 33.3% - 66.6%) */
         .t2-bin {
-          animation: animT2Bin 27s infinite;
+          animation: animT2Bin 24s infinite;
         }
         .t2-bin .type-bin {
-          animation: animT2Type 27s steps(35, end) infinite, cursorBlink 0.75s step-end infinite;
+          animation: animT2Type 24s steps(35, end) infinite, cursorBlink 0.75s step-end infinite;
         }
         .t2-human {
-          animation: animT2Human 27s infinite;
+          animation: animT2Human 24s infinite;
         }
         .t2-human .type-human {
           animation: cursorBlink 0.75s step-end infinite;
         }
 
         @keyframes animT2Bin {
-          0%, 33.2% { opacity: 0; visibility: hidden; filter: brightness(1); }
+          0%, 33.29% { opacity: 0; visibility: hidden; filter: brightness(1); }
           33.3% { opacity: 1; visibility: visible; filter: brightness(1); }
-          47.3% { filter: brightness(1); }
-          48.3% { filter: brightness(2.6) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
-          49.3% { opacity: 0; visibility: hidden; }
+          44.8% { filter: brightness(1); }
+          45.3% { filter: brightness(2.8) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
+          45.8% { opacity: 0; visibility: hidden; } /* Instantly Swaps Out */
           100% { opacity: 0; visibility: hidden; }
         }
         @keyframes animT2Type {
-          0%, 34.8% { width: 0; }
-          44.8% { width: 335px; } /* Types ALL chars */
-          49.3%, 100% { width: 335px; } /* Pauses on FULL text */
+          0%, 33.3% { width: 0; }
+          43.7% { width: 335px; } /* Types all binary characters */
+          45.8%, 100% { width: 335px; }
         }
         @keyframes animT2Human {
-          0%, 49.3% { opacity: 0; visibility: hidden; transform: translateY(4px); }
-          50.1% { opacity: 1; visibility: visible; transform: translateY(0); }
-          63.3% { opacity: 1; visibility: visible; transform: translateY(0); } /* Stays 3.6s */
-          66.1% { opacity: 0; visibility: hidden; transform: translateY(-4px); }
+          0%, 45.79% { opacity: 0; visibility: hidden; }
+          45.8% { opacity: 1; visibility: visible; } /* Instantly Becomes Word on Enter! */
+          62.5% { opacity: 1; visibility: visible; } /* Stays for 4 full seconds */
+          65.8% { opacity: 0; visibility: hidden; } /* Finished, THEN Fades! */
           100% { opacity: 0; visibility: hidden; }
         }
 
-        /* TOPIC 3: Computer Vision & AI (18s - 27s / 66.6% - 100%) */
+        /* TOPIC 3: Computer Vision & AI (16s - 24s / 66.6% - 100%) */
         .t3-bin {
-          animation: animT3Bin 27s infinite;
+          animation: animT3Bin 24s infinite;
         }
         .t3-bin .type-bin {
-          animation: animT3Type 27s steps(35, end) infinite, cursorBlink 0.75s step-end infinite;
+          animation: animT3Type 24s steps(35, end) infinite, cursorBlink 0.75s step-end infinite;
         }
         .t3-human {
-          animation: animT3Human 27s infinite;
+          animation: animT3Human 24s infinite;
         }
         .t3-human .type-human {
           animation: cursorBlink 0.75s step-end infinite;
         }
 
         @keyframes animT3Bin {
-          0%, 66.5% { opacity: 0; visibility: hidden; filter: brightness(1); }
+          0%, 66.59% { opacity: 0; visibility: hidden; filter: brightness(1); }
           66.6% { opacity: 1; visibility: visible; filter: brightness(1); }
-          80.6% { filter: brightness(1); }
-          81.6% { filter: brightness(2.6) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
-          82.6% { opacity: 0; visibility: hidden; }
+          78.1% { filter: brightness(1); }
+          78.6% { filter: brightness(2.8) drop-shadow(0 0 10px #ffffff); } /* Enter Pressed */
+          79.1% { opacity: 0; visibility: hidden; } /* Instantly Swaps Out */
           100% { opacity: 0; visibility: hidden; }
         }
         @keyframes animT3Type {
-          0%, 68.1% { width: 0; }
-          78.1% { width: 335px; } /* Types ALL chars */
-          82.6%, 100% { width: 335px; } /* Pauses on FULL text */
+          0%, 66.6% { width: 0; }
+          77.0% { width: 335px; } /* Types all binary characters */
+          79.1%, 100% { width: 335px; }
         }
         @keyframes animT3Human {
-          0%, 82.6% { opacity: 0; visibility: hidden; transform: translateY(4px); }
-          83.4% { opacity: 1; visibility: visible; transform: translateY(0); }
-          96.6% { opacity: 1; visibility: visible; transform: translateY(0); } /* Stays 3.6s */
-          99.4% { opacity: 0; visibility: hidden; transform: translateY(-4px); }
+          0%, 79.09% { opacity: 0; visibility: hidden; }
+          79.1% { opacity: 1; visibility: visible; } /* Instantly Becomes Word on Enter! */
+          95.8% { opacity: 1; visibility: visible; } /* Stays for 4 full seconds */
+          99.1% { opacity: 0; visibility: hidden; } /* Finished, THEN Fades! */
           100% { opacity: 0; visibility: hidden; }
         }
       ]]></style>
@@ -227,7 +228,7 @@
         <!-- Giant Name in Mid-Left -->
         <h1 class="hero-name">ZEDRAYAMI</h1>
 
-        <!-- Relaxed Typewriter & Enter Terminal Line -->
+        <!-- Typewriter & Instant Enter Swap Terminal Line -->
         <div class="terminal-box">
 
           <!-- TOPIC 1: AIoT Systems -->
@@ -262,7 +263,7 @@
             </div>
             <div class="human-line t3-human">
               <span class="prompt">&gt;</span>
-              <span class="type-human">Computer Vision &amp; Deep Learning</span>
+              <span class="human-text type-human">Computer Vision &amp; Deep Learning</span>
             </div>
           </div>
 
